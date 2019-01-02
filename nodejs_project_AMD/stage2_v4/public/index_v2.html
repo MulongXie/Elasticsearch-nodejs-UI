@@ -1,0 +1,166 @@
+<html>
+<head>
+    <title>LogSearch</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="public/plotly-latest.min.js"></script>
+    <style>
+        #input{
+            margin:0px auto;
+            width:500px;
+            height:100px;
+        }
+        body{
+            background-image: url("public/bg1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+        div.result_table{
+            height: 65%;
+            padding-left: 0;
+            padding-right: 0;
+            overflow-y: auto;
+            overflow-x: auto;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+         }
+        table{
+            color: #000000;
+            background-color: #f3f3f3;
+        }
+        td{
+            height: auto;
+            background-color: #00BBFF;
+        }
+        th{
+            background-color: #88b6bc;
+        }
+        pre{
+            max-height: 400px;
+            overflow: auto;
+            width: auto;
+        }
+
+    </style>
+</head>
+
+
+<body>
+<div id="logoimg" align="center">
+    <img src="/public/logo.png" id="logo" width="150" height="65">
+</div>
+
+
+<div id="input">
+    <h2 align="center">
+    Log Searching System <br>
+    </h2>
+
+    <div id="input_folder" align="center">
+        <input type="text" id="folder" placeholder="Input target folder" list="folderList" onkeypress="enterPress1(event)">
+        <datalist id="folderList">
+            <option label="IT" value="IT">
+            <option label="operator" value="operator">
+            <option label="All Folders" value="All">
+        </datalist>
+        <button id="sbmt_folder" class="sbmt_button" onclick="show()">Config</button>
+    </div>
+
+    <div id="input_keyword" align="center" style="display: none;">
+        <p id="folder_name"></p>
+        <input type="text" id="keyword" placeholder="Input keyword" onkeypress="enterPress2(event)">
+        <button id="sbmt_keyword" class="sbmt_button">Search</button>
+    </div>
+</div>
+
+
+<div id="rt" class="result_table" align="center">
+</div>
+
+<div id="plot"></div>
+
+<script type="application/javascript">
+    // ajax data transfer
+    $('#sbmt_keyword').click(function () {
+        $.ajax({
+            url: '/getkeyword',
+            type: 'get',
+            data: {
+                folder: $('#folder').val(),
+                keyword: $('#keyword').val()
+            },
+            success: function (data, status, xhr){
+
+                // parse the string data into Json
+                var data_json = eval('(' + data + ')');
+
+                var folder = document.getElementById('folder').value;
+                document.getElementById('folder_name').innerText = 'Current Folder: ' + folder;
+                document.getElementById('rt').innerHTML = data_json['disp'];
+
+                plot(data_json['draw_data']);
+            }
+        })
+    });
+
+    // keyword input div popup
+    function show() {
+        var folder = document.getElementById('folder').value;
+        if (folder == "All"){
+            folder = "All (IT, operator)"
+        }
+        document.getElementById('input_keyword').style.display = 'block';
+        document.getElementById('folder_name').innerText = 'Current Folder: ' + folder;
+    }
+
+    // enter press
+    function enterPress1(e) {
+        var e = e || window.event;
+        if(e.keyCode == 13){
+            document.getElementById("sbmt_folder").click();
+        }
+    }
+    function enterPress2(e) {
+        var e = e || window.event;
+        if(e.keyCode == 13){
+            document.getElementById("sbmt_keyword").click();
+        }
+    }
+
+    // draw the diagram
+    function plot(data) {
+        var div = document.getElementById('plot');
+        var x = [];
+        var y = [];
+
+        for (var i in data){
+            x.push(i);
+            y.push(data[i]);
+            console.log(i);
+            console.log(data[i]);
+        }
+
+        var plot_data = [{
+            x: x, y: y, type:'bar'
+        }];
+
+        var layout = {
+            title: "Results in Each Log",
+            xaxis:{
+                title: "log name",
+                showgrid: false,
+                zeroline: false
+            },
+            yaxis:{
+                title: "appear time",
+                showgrid: false,
+                zeroline: false
+            }
+        };
+
+        Plotly.newPlot(div, plot_data, layout, {responsive:true});
+    }
+</script>
+
+</body>
+</html>
