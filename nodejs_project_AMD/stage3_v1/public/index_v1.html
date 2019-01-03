@@ -103,7 +103,7 @@
         <datalist id="folderList">
             <option label="IT" value="IT">
             <option label="operator" value="operator">
-            <option label="All Folders" value="All">
+            <option label="All Folders and Database" value="All">
         </datalist>
         <button id="sbmt_folder" class="sbmt_button" onclick="show()">Config</button>
     </div>
@@ -177,7 +177,7 @@
                 // parse the string data into Json
                 var data_json = eval('(' + data + ')');
 
-                if (data_json['status'] == 1){
+                if (data_json['status'] === 1){
 
                     var folder = document.getElementById('folder').value;
                     document.getElementById('folder_name').innerText = 'Current Folder: ' + folder;
@@ -214,7 +214,7 @@
     // keyword input div popup
     function show() {
         var folder = document.getElementById('folder').value;
-        if (folder == "All"){
+        if (folder === "All"){
             folder = "All (Database; Folders: IT, operator)"
         }
         document.getElementById('input_keyword').style.display = 'block';
@@ -224,13 +224,13 @@
     // enter press
     function enterPress1(e) {
         var e = e || window.event;
-        if(e.keyCode == 13){
+        if(e.keyCode === 13){
             document.getElementById("sbmt_folder").click();
         }
     }
     function enterPress2(e) {
         var e = e || window.event;
-        if(e.keyCode == 13){
+        if(e.keyCode === 13){
             document.getElementById("sbmt_keyword").click();
         }
     }

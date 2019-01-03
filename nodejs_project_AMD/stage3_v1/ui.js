@@ -82,7 +82,7 @@ function disp_db(hit, no_db){
     disp_content += "<td align='center'>" + hit._source.type + "</td>";
     disp_content += "<td align='center'>";
     for(var j in hit._source){
-        disp_content += "<b>" + j + ':' + "</b>" + hit._source[j] + '|';
+        disp_content += "<b>" + j + ':' + "</b>" + hit._source[j] + "<br>";
     }
     disp_content += "</td></tr>";
 
@@ -95,13 +95,12 @@ function disp_detail(result, keyword){
     var table_txt = "<table id='table_txt' border='0'><tr><th>Number</th><th>Log Folder</th><th>Log Name</th><th>Log Date</th><th>Log Time</th><th>Message</th></tr>";
     var table_db = "<table id='table_db' border='0'><tr><th>No.</th><th>Database</th><th>Content</th></tr>"
     var no_txt = 1;
-    var no_db = false;
+    var no_db = 1;
     for(var i = 0; i < hits.length; i++){
 
         var disp_time_limit = 3;
         var used_log = [];  // record the logs that display more than limit time
         var disp_time = 0;
-        console.log(hits[i])
         if(hits[i]._source.type === 'txt'){
             // skip the used names
             var log_name = hits[i]._source.log_name;

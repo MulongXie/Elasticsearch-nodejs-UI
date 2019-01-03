@@ -21,45 +21,13 @@
 
 function queryFunc(keyword, flag, folder=false) {
 
-    var index = "logstash-db_log-2019.1.2";  //'logstash-db-2018.12.31','logstash-logs-2018.12.26'
+    var index = "logstash-db_log-2019.1.3";  //'logstash-db-2018.12.31','logstash-logs-2018.12.26'
     var results_number = 20;
 
     switch (flag) {
         // 1. search in text data only
-        // search in all text folders
-        case 1:
-            return{
-                index: index,
-                type: 'doc',
-                size: results_number,
-                body:{
-                    query:{
-                        bool:{
-                            must:[
-                                {match:{"type":"txt"}},
-                                {match:{"message": keyword}}
-                                ]
-                        }
-                    },
-                    aggs:{
-                        count_folder:{
-                            terms:{
-                                "field": "log_folder.keyword"
-                            },
-                            aggs:{
-                                count_log:{
-                                    terms:{
-                                        "field": "log_name.keyword"
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    _source:["log_time","log_date","log_name","message","log_folder","type"]
-                }
-            };
         // search in given text folder
-        case 2:
+        case 1:
             return{
                 index: index,
                 type: 'doc',
@@ -92,43 +60,19 @@ function queryFunc(keyword, flag, folder=false) {
                 }
             };
 
-        // 2. search in database only
-        // search in all database
-        case 3:
+        // 2. search in all data
+        case 2:
             return{
                 index: index,
                 type: 'doc',
                 size: results_number,
-                body: {
+                body:{
                     query:{
                         multi_match:{
                             "query": keyword,
-                            "fields": ["auditid","posted","drid","due","roleid","sequencenum","todoid","type","actionid","userid",
-                                "created","firstname","security",
-                                "email","active","name","lastname","modified","alias",
-                                "viewoperation","viewassignedto"
-                                ,"cfgclass","cfgoperation","cfglocation","vieworiginatedlow","viewstatus","viewcommitmentlow","viewcloselocation"
-                            ]
+                            "fields": ["db_message", "message"]
                         }
                     },
-                    aggs:{
-                        database:{
-                            terms:{
-                                "field": "type.keyword"
-                            }
-                        }
-                    }
-                }
-            };
-
-        // 3. search in both folder and database
-        // show all
-        case 4:
-            return {
-                index: 'logstash-db_log-2019.1.2',
-                type: 'doc',
-                size: results_number,
-                body: {
                     aggs: {
                         type: {
                             terms: {
@@ -152,24 +96,15 @@ function queryFunc(keyword, flag, folder=false) {
                     }
                 }
             };
-        case 5:
-            return{
-                index: 'logstash-db_log-2019.1.2',
+
+        // 3. search in both folder and database
+        // show all
+        case 3:
+            return {
+                index: index,
                 type: 'doc',
                 size: results_number,
                 body: {
-                    query:{
-                        multi_match:{
-                            "query": 150298, //150298
-                            "fields": ["message",
-                                "auditid","posted","drid","due","roleid","sequencenum","todoid","type","actionid","userid",
-                                "created","firstname","security","lastdr",
-                                "email","active","name","lastname","modified","alias",
-                                "viewoperation","viewassignedto"
-                                ,"cfgclass","cfgoperation","cfglocation","vieworiginatedlow","viewstatus","viewcommitmentlow","viewcloselocation"
-                            ]
-                        }
-                    },
                     aggs: {
                         type: {
                             terms: {
@@ -224,14 +159,17 @@ function elasticSearch(search, sendBack)
 
 
     // ****** query ******
+    // show overview
     if(show_all){
-        query = queryFunc('', 4);
+        query = queryFunc('', 3);
     }
+    // search in all txt files and database
     else if(folder === 'All') {
-        query = queryFunc(keyword, 5);
+        query = queryFunc(keyword, 2);
     }
+    // search in given folder of txt files
     else{
-        query = queryFunc(keyword, 2, folder);
+        query = queryFunc(keyword, 1, folder);
     }
     client.search(query).then(function (res){
         // get search resultj

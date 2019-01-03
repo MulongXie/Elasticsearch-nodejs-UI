@@ -16,7 +16,7 @@
 
 // *** 1/3/2019 ***
 // *** version 5 ***
-// Split functions into UI module 
+// Split functions into UI module
 // Show all for both database and txt files
 // Show detail for both database and txt files
 

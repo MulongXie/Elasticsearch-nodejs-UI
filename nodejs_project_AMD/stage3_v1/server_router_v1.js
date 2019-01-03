@@ -16,7 +16,9 @@
 
 // *** 1/3/2019 ***
 // *** version 5 ***
+// Split functions into UI module
 // Show all for both database and txt files
+// Show detail for both database and txt files
 
 function router() {
 
@@ -57,31 +59,17 @@ function router() {
 
         // search by given keywords
         es.elasticSearch(search, function (result) {
+            var response = {};  // the final return response
             if(result){
-
                 // return variables
-                var response = {};  // the final return response
                 var disp = '';  // the table on website
                 var draw_data = {};  // the data for drawing diagram
-
-                // case1: search in .txt files
-                if(result.hits.hits[0]._source.type === 'txt'){
-                    // 1. display the overall result
-                    var disp_overview = ui.disp_overview(result, draw_data);
-
-                    if (search['show_all']){
-                        disp = disp_overview;
-                    }
-                    else{
-                        // 2. display the detailed result
-                        var disp_content = ui.disp_detail(result, keycontent);
-                        disp = disp_overview + disp_content;
-                    }
+                // show all or show details
+                if(search['show_all']){
+                    disp = ui.disp_overview(result, draw_data);
                 }
-                // case2: search in database
                 else{
-                    var disp_content = ui.disp_db(result);
-                    disp += disp_content;
+                    disp += ui.disp_detail(result, keycontent);
                 }
 
                 // 3. gather the results
@@ -93,7 +81,6 @@ function router() {
                 res.end(JSON.stringify(response));
             }
             else{
-                var response = {};
                 response['disp'] = "<p align='center' style='font-weight: bolder'><b>No related result found by given keyword in target folder: " + search['folder'] + '/' + search['keyword'] + "</b></p>";
                 response['status'] = -1;
                 res.end(JSON.stringify(response));
