@@ -18,6 +18,7 @@
 // *** 1/3/2019 ***
 // *** version 5 ***
 // Show all for both database and txt files
+// Search in both database and txt files
 
 function queryFunc(keyword, flag, folder=false) {
 
