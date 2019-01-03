@@ -146,7 +146,7 @@
             success: function (data) {
                 // parse the string data into Json
                 var data_json = eval('(' + data + ')');
-                document.getElementById('folder_name').innerText = 'Current Folder: All logs on server';
+                document.getElementById('folder_name').innerText = 'Current Folder: All logs and database on server';
                 document.getElementById('disp_table').innerHTML = data_json['disp'];
 
                 document.getElementById('rt').style.display = 'block';
@@ -215,7 +215,7 @@
     function show() {
         var folder = document.getElementById('folder').value;
         if (folder == "All"){
-            folder = "All (IT, operator)"
+            folder = "All (Database; Folders: IT, operator)"
         }
         document.getElementById('input_keyword').style.display = 'block';
         document.getElementById('folder_name').innerText = 'Current Folder: ' + folder;

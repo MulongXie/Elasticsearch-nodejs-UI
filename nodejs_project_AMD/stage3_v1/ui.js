@@ -1,3 +1,10 @@
+// *** 1/2/2019 ***
+// UI module independent from router
+
+// *** 1/3/2019 ***
+// *** version 5 ***
+// Show all for both database and txt files
+
 
 function disp_overview(result, draw_data){
     var type = result.aggregations.type.buckets;
@@ -41,73 +48,84 @@ function disp_overview(result, draw_data){
 }
 
 
-function disp_detail(result, keycontent){
+function disp_txt(hit, keycontent, no_txt){
 
-    var hits = result.hits.hits;  // the detailed query result
+    var log_folder = hit._source.log_folder;
+    var log_name = hit._source.log_name;
+    var log_content;
+    var disp_content = '';
 
-    var disp_time_limit = 4;
-    var used_log = [];  // record the logs that display more than limit times
-    var disp_time = 0;
-    var disp_number = 1;
-    var disp_content = "<table id=\"display_content\" border=\"0\" align=\"center\">";
-    disp_content += "<tr><th>Number</th><th>Log Folder</th><th>Log Name</th><th>Log Date</th><th>Log Time</th><th>Message</th></tr>";
-    for(var i = 0; i < hits.length; i++){
-        var log_folder = hits[i]._source.log_folder;
-
-        // limit the time of display for each log
-        var log_name = hits[i]._source.log_name;
-        // skip the used names
-        if (used_log.indexOf(log_name) != -1){continue;}
-        if (disp_time >= disp_time_limit){
-            disp_time = 0;
-            used_log.push(log_name);
-            continue;
-        }
-        disp_time ++;
-
-        if (hits[i]._source.log_content){
-            var log_content =  hits[i]._source.log_content.replace(/\</g,'\[').replace(/\>/g,'\]');
-        }
-        else{
-            var log_content =  hits[i]._source.message.replace(/\</g,'\[').replace(/\>/g,'\]');
-        }
-        // highlight keywords
-        var keyreg = new RegExp(keycontent, 'ig');
-        log_content = log_content.replace(keyreg, '<mark>' + keycontent + '</mark>');
-
-        disp_content += "<tr><td align='center'>" + disp_number + "</td>";
-        disp_content += "<td align='center'>" + log_folder + "</td>";
-        disp_content += "<td align='center'><a href='http://localhost:8888/download?file=" + log_folder + "/" + log_name + "'>" + log_name + "</a></td>";
-        disp_content += "<td align='center'>" + hits[i]._source.log_date + "</td>";
-        disp_content += "<td align='center'>" + hits[i]._source.log_time + "</td>";
-        disp_content += "<td><pre>" + log_content + "</pre></td></tr>";
-
-        disp_number ++;
+    if (hit._source.log_content){
+        log_content =  hit._source.log_content.replace(/\</g,'\[').replace(/\>/g,'\]');
     }
-    disp_content += "</table>";
+    else{
+        log_content =  hit._source.message.replace(/\</g,'\[').replace(/\>/g,'\]');
+    }
+    // highlight keywords
+    var keyreg = new RegExp(keycontent, 'ig');
+    log_content = log_content.replace(keyreg, '<mark>' + keycontent + '</mark>');
+
+    disp_content += "<tr><td align='center'>" + no_txt + "</td>";
+    disp_content += "<td align='center'>" + log_folder + "</td>";
+    disp_content += "<td align='center'><a href='http://localhost:8888/download?file=" + log_folder + "/" + log_name + "'>" + log_name + "</a></td>";
+    disp_content += "<td align='center'>" + hit._source.log_date + "</td>";
+    disp_content += "<td align='center'>" + hit._source.log_time + "</td>";
+    disp_content += "<td><pre>" + log_content + "</pre></td></tr>";
 
     return disp_content;
 }
 
 
-function disp_db(result){
-    var hits = result.hits.hits;  // the detailed query result
+function disp_db(hit, no_db){
 
-    var disp_content = "<table><tr><th>No.</th><th>Database</th><th>Content</th></tr>";
-    for(var i = 0; i < hits.length; i++){
-        disp_content += "<tr><td align='center'>" + i + "</td>";
-        disp_content += "<td align='center'>" + hits[i]._source.type + "</td>";
-        disp_content += "<td align='center'>";
-        for(var j in hits[i]._source){
-            disp_content += "<b>" + j + ':' + "</b>" + hits[i]._source[j] + '|';
-        }
-        disp_content += "</td></tr>";
+    var disp_content = "<tr><td align='center'>" + no_db + "</td>";
+    disp_content += "<td align='center'>" + hit._source.type + "</td>";
+    disp_content += "<td align='center'>";
+    for(var j in hit._source){
+        disp_content += "<b>" + j + ':' + "</b>" + hit._source[j] + '|';
     }
-    disp_content += "</table>";
+    disp_content += "</td></tr>";
 
     return disp_content;
+}
+
+
+function disp_detail(result, keyword){
+    var hits = result.hits.hits;
+    var table_txt = "<table id='table_txt' border='0'><tr><th>Number</th><th>Log Folder</th><th>Log Name</th><th>Log Date</th><th>Log Time</th><th>Message</th></tr>";
+    var table_db = "<table id='table_db' border='0'><tr><th>No.</th><th>Database</th><th>Content</th></tr>"
+    var no_txt = 1;
+    var no_db = false;
+    for(var i = 0; i < hits.length; i++){
+
+        var disp_time_limit = 3;
+        var used_log = [];  // record the logs that display more than limit time
+        var disp_time = 0;
+        console.log(hits[i])
+        if(hits[i]._source.type === 'txt'){
+            // skip the used names
+            var log_name = hits[i]._source.log_name;
+            if (used_log.indexOf(log_name) !== -1){continue;}
+            if (disp_time >= disp_time_limit) {
+                disp_time = 0;
+                used_log.push(log_name);
+                continue;
+            }
+            disp_time ++;
+
+            table_txt += disp_txt(hits[i], keyword, no_txt);
+            no_txt += 1;
+        }
+        else{
+            table_db += disp_db(hits[i], no_db);
+            no_db += 1;
+        }
+    }
+    table_txt += "</table>";
+    table_db += "</table>";
+
+    return table_txt + "<br>" + table_db;
 }
 
 exports.disp_overview = disp_overview;
 exports.disp_detail = disp_detail;
-exports.disp_db = disp_db;

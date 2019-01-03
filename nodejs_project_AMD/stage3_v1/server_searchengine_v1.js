@@ -15,6 +15,10 @@
 // *** version 4 ***
 // Add show all functionality
 
+// *** 1/3/2019 ***
+// *** version 5 ***
+// Show all for both database and txt files
+
 function queryFunc(keyword, flag, folder=false) {
 
     var index = "logstash-db_log-2019.1.2";  //'logstash-db-2018.12.31','logstash-logs-2018.12.26'
@@ -51,7 +55,7 @@ function queryFunc(keyword, flag, folder=false) {
                             }
                         }
                     },
-                    _source:["log_time", "log_date","log_name","message","log_folder"]
+                    _source:["log_time","log_date","log_name","message","log_folder","type"]
                 }
             };
         // search in given text folder
@@ -84,7 +88,7 @@ function queryFunc(keyword, flag, folder=false) {
                             }
                         }
                     },
-                    _source:["log_time", "log_date","log_name","message","log_folder"]
+                    _source:["log_time", "log_date","log_name","message","log_folder","type"]
                 }
             };
 
@@ -123,7 +127,7 @@ function queryFunc(keyword, flag, folder=false) {
             return {
                 index: 'logstash-db_log-2019.1.2',
                 type: 'doc',
-                size: 2,
+                size: results_number,
                 body: {
                     aggs: {
                         type: {
@@ -147,7 +151,48 @@ function queryFunc(keyword, flag, folder=false) {
                         }
                     }
                 }
-            }
+            };
+        case 5:
+            return{
+                index: 'logstash-db_log-2019.1.2',
+                type: 'doc',
+                size: results_number,
+                body: {
+                    query:{
+                        multi_match:{
+                            "query": 150298, //150298
+                            "fields": ["message",
+                                "auditid","posted","drid","due","roleid","sequencenum","todoid","type","actionid","userid",
+                                "created","firstname","security","lastdr",
+                                "email","active","name","lastname","modified","alias",
+                                "viewoperation","viewassignedto"
+                                ,"cfgclass","cfgoperation","cfglocation","vieworiginatedlow","viewstatus","viewcommitmentlow","viewcloselocation"
+                            ]
+                        }
+                    },
+                    aggs: {
+                        type: {
+                            terms: {
+                                "field": "type.keyword"
+                            },
+                            aggs: {
+                                folder: {
+                                    terms: {
+                                        "field": "log_folder.keyword"
+                                    },
+                                    aggs: {
+                                        log: {
+                                            terms: {
+                                                "field": "log_name.keyword"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            };
     }
 }
 
@@ -183,7 +228,7 @@ function elasticSearch(search, sendBack)
         query = queryFunc('', 4);
     }
     else if(folder === 'All') {
-        query = queryFunc(keyword, 4);
+        query = queryFunc(keyword, 5);
     }
     else{
         query = queryFunc(keyword, 2, folder);
