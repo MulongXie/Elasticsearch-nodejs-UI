@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8ab92d-df41-40e5-be59-bd07c9a1cdb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage2_v4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stage2_v4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage2_v4/output/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/stage2_v4/output/search.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage3_v1/output/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v1/output/search.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage3_v1/server_searchengine_v1.js" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v1/server_searchengine_v1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage3_v1/ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v1/ui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stage3_v1/server_router_v1.js" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v1/server_router_v1.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +18,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_v1/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="65" column="50" lean-forward="true" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
+            <state relative-caret-position="162">
+              <caret line="66" lean-forward="true" selection-end-line="119" selection-end-column="9" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stage3_v1/server_router_v1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1766">
+              <caret line="119" column="9" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
@@ -37,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_v1/server_searchengine_v1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="593">
               <caret line="139" column="27" lean-forward="true" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -49,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_v1/ui.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+            <state relative-caret-position="-102">
+              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -83,6 +92,7 @@
       <list>
         <option value="$PROJECT_DIR$/stage3_v1/server_searchengine_v1.js" />
         <option value="$PROJECT_DIR$/stage3_v1/ui.js" />
+        <option value="$PROJECT_DIR$/stage3_v1/server_router_v1.js" />
       </list>
     </option>
   </component>
@@ -169,19 +179,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546474591558</updated>
-      <workItem from="1546474594324" duration="5202000" />
+      <workItem from="1546474594324" duration="5854000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5202000" />
+    <option name="totallyTimeSpent" value="5854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12294043" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12294043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
@@ -189,7 +199,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32496512" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32496512" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -203,18 +213,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stage3_v1/server_router_v1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1819">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stage2_v4/server_router_v4.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -223,31 +221,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v1/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="65" column="50" lean-forward="true" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v1/server_searchengine_v1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="139" column="27" lean-forward="true" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#726#1824#0" />
-            <element signature="e#1872#3030#0" />
-            <element signature="e#3894#4966#0" />
           </folding>
         </state>
       </provider>
@@ -261,8 +234,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stage3_v1/ui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+        <state relative-caret-position="-102">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage3_v1/server_searchengine_v1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="139" column="27" lean-forward="true" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#726#1824#0" />
+            <element signature="e#1872#3030#0" />
+            <element signature="e#3894#4966#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage3_v1/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="66" lean-forward="true" selection-end-line="119" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage3_v1/server_router_v1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1766">
+          <caret line="119" column="9" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
