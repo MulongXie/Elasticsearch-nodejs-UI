@@ -21,7 +21,7 @@ function queryFunc(keyword, flag, folder=false) {
     var results_number = 20;
 
     switch (flag) {
-        // 1. search in text data
+        // 1. search in text data only
         // search in all text folders
         case 1:
             return{
@@ -87,33 +87,10 @@ function queryFunc(keyword, flag, folder=false) {
                     _source:["log_time", "log_date","log_name","message","log_folder"]
                 }
             };
-        // show all in text folders
-        case 3:
-            return{
-                index: index,
-                type: 'doc',
-                size: results_number,
-                body:{
-                    aggs:{
-                        count_folder:{
-                            terms:{
-                                "field": "log_folder.keyword"
-                            },
-                            aggs:{
-                                count_log:{
-                                    terms:{
-                                        "field": "log_name.keyword"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            };
 
-        // 2. search in database
+        // 2. search in database only
         // search in all database
-        case 4:
+        case 3:
             return{
                 index: index,
                 type: 'doc',
@@ -139,24 +116,33 @@ function queryFunc(keyword, flag, folder=false) {
                     }
                 }
             };
-        // show all in database
-        case 5:
-            return{
-                index: index,
+
+        // 3. search in both folder and database
+        // show all
+        case 4:
+            return {
+                index: 'logstash-db_log-2019.1.2',
                 type: 'doc',
-                size: results_number,
-                body:{
-                    query:{
-                      bool:{
-                          must_not:{
-                              match:{"type":"txt"}
-                          }
-                      }
-                    },
-                    aggs:{
-                        database:{
-                            terms:{
+                size: 2,
+                body: {
+                    aggs: {
+                        type: {
+                            terms: {
                                 "field": "type.keyword"
+                            },
+                            aggs: {
+                                folder: {
+                                    terms: {
+                                        "field": "log_folder.keyword"
+                                    },
+                                    aggs: {
+                                        log: {
+                                            terms: {
+                                                "field": "log_name.keyword"
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -194,7 +180,7 @@ function elasticSearch(search, sendBack)
 
     // ****** query ******
     if(show_all){
-        query = queryFunc('', 3);
+        query = queryFunc('', 4);
     }
     else if(folder === 'All') {
         query = queryFunc(keyword, 4);

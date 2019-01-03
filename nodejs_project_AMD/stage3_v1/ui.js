@@ -1,28 +1,43 @@
 
 function disp_overview(result, draw_data){
+    var type = result.aggregations.type.buckets;
 
-    var count_folder = result.aggregations.count_folder.buckets;  // the aggregation function result
+    var overview;
+    var overview_txt = "<table id='over_txt' border='0' align='center'><tr><th>Log Folder</th><th>Log Name</th><th>Log Results Amount</th><th>Folder Results Amount</th></tr>"; // table of txt
+    var overview_db = "<table id='over_db' border='0' align='center'><tr><th>Database Name</th><th>Data Amount</th></tr>"; // table of db
 
-    var disp_count = "<table id='display_count' border='0' align='center'>";
-    disp_count += "<tr><th>Log Folder</th><th>Log Name</th><th>Log Results Amount</th><th>Folder Results Amount</th></tr>";
-    for (var j = 0; j < count_folder.length; j++){
-        var count_log = count_folder[j].count_log.buckets;
-        disp_count += "<tr><td align='center' rowspan='" + count_log.length + "'>" + count_folder[j].key + "</td>";
+    for (var i = 0; i < type.length; i++){
 
-        disp_count += "<td align='center'><a href='http://localhost:8888/download?file=" + count_folder[j].key + "/" + count_log[0].key + "'>" + count_log[0].key + "</td>";
-        disp_count += "<td align='center'>" + count_log[0].doc_count + "</td>";
-        draw_data [count_log[0].key] = count_log[0].doc_count;
-        disp_count += "<td align='center' rowspan='" + count_log.length + "'>" + count_folder[j].doc_count + "</td></tr>";
-        for (var k = 1; k < count_log.length; k++){
-            disp_count += "<td align='center'><a href='http://localhost:8888/download?file=" + count_folder[j].key + "/" + count_log[k].key + "'>" + count_log[k].key + "</td>";
-            disp_count += "<td align='center'>" + count_log[k].doc_count + "</td></tr>";
-            draw_data [count_log[k].key] = count_log[k].doc_count;
+        // overview of txt files
+        if (type[i].key === 'txt'){
+            var count_folder = type[i].folder.buckets;
+            for (var j = 0; j < count_folder.length; j++){
+                var count_log = count_folder[j].log.buckets;
+
+                overview_txt += "<tr><td align='center' rowspan='" + count_log.length + "'>" + count_folder[j].key + "</td>";
+                overview_txt += "<td align='center'><a href='http://localhost:8888/download?file=" + count_folder[j].key + "/" + count_log[0].key + "'>" + count_log[0].key + "</td>";
+                overview_txt += "<td align='center'>" + count_log[0].doc_count + "</td>";
+                overview_txt += "<td align='center' rowspan='" + count_log.length + "'>" + count_folder[j].doc_count + "</td></tr>";
+                draw_data [count_log[0].key] = count_log[0].doc_count; // restore for drawing
+                for (var k = 1; k < count_log.length; k++){
+                    overview_txt += "<td align='center'><a href='http://localhost:8888/download?file=" + count_folder[j].key + "/" + count_log[k].key + "'>" + count_log[k].key + "</td>";
+                    overview_txt += "<td align='center'>" + count_log[k].doc_count + "</td></tr>";
+                    draw_data [count_log[k].key] = count_log[k].doc_count;
+                }
+
+            }
+            overview_txt += "</table><br>";
         }
-
+        // overall of database
+        else{
+            overview_db += "<tr><td align='center'><b>" + type[i].key + "</b></td><td align='center'>" + type[i].doc_count + "</td>"
+            draw_data ["DB_" + type[i].key] = type[i].doc_count;
+        }
     }
-    disp_count += "</table><br>";
+    overview_db += "</table><br>";
+    overview = overview_db + overview_txt;
 
-    return disp_count;
+    return overview;
 }
 
 
