@@ -1,24 +1,6 @@
-// *** 12/24/2018 ***
-// *** version 1 ***
-// Show the amount of keywords appearing in each logs (if > 0)
-
-// *** 12/26/2018 ***
-// *** version 2 ***
-// Show up to 5 results for each log files
-
-// *** 12/27/2018 ***
-// *** version 3 ***
-// Add visualization functionality
-
-// *** 12/27/2018 ***
-// *** version 4 ***
-// Add show all functionality
-
-// *** 1/3/2019 ***
-// *** version 5 ***
-// Split functions into UI module
-// Show all for both database and txt files
-// Show detail for both database and txt files in the same page
+// *** s3 v2 ***
+// *** 1/4/2019 ***
+// split the result of different data source into different pages
 
 function router() {
 
@@ -26,8 +8,8 @@ function router() {
     var express = require('express');
     var bodyParser = require('body-parser');
     var fs = require('fs');
-    var es = require('./server_searchengine_v1');
-    var ui = require('./ui_v1');
+    var es = require('./server_searchengine_v2');
+    var ui = require('./ui_v2');
 
     var app = express();
     var keycontent;  // the input keyword
@@ -41,7 +23,7 @@ function router() {
 
     // *** router start ***
     app.get('/', function (req, res) {
-        res.sendfile(__dirname + '/public/index_v1.html');
+        res.sendfile(__dirname + '/public/index_v2.html');
     });
 
 
@@ -101,7 +83,7 @@ function router() {
 
 
     // *** open port ***
-    var server = app.listen(8888, function () {
+    app.listen(8888, function () {
         console.log('server created \n');
     });
 }
