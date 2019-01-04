@@ -1,0 +1,708 @@
+{
+  "mappings" : {
+    "doc" : {
+      "dynamic_templates" : [
+        {
+          "message_field" : {
+            "path_match" : "message",
+            "match_mapping_type" : "string",
+            "mapping" : {
+              "norms" : false,
+              "type" : "text"
+            }
+          }
+        },
+        {
+          "string_fields" : {
+            "match" : "*",
+            "match_mapping_type" : "string",
+            "mapping" : {
+              "fields" : {
+                "keyword" : {
+                  "ignore_above" : 256,
+                  "type" : "keyword"
+                }
+              },
+              "norms" : false,
+              "type" : "text"
+            }
+          }
+        }
+      ],
+      "properties" : {
+        "@timestamp" : {
+          "type" : "date"
+        },
+        "@version" : {
+          "type" : "keyword"
+        },
+        "actionid" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "active" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "alias" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "auditid" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "cfgclass" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "cfglocation" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "cfgoperation" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "cfgproduct" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "cfgsecurity" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "created" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "drid" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "due" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "email" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "firstname" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "fontsize" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "formexpansion" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "geoip" : {
+          "dynamic" : "true",
+          "properties" : {
+            "ip" : {
+              "type" : "text",
+			"copy_to": "db_message",
+			"norms" : false,
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+            },
+            "latitude" : {
+              "type" : "text",
+				"copy_to": "db_message",
+				"norms" : false,
+				"fields" : {
+				  "keyword" : {
+					"type" : "keyword",
+					"ignore_above" : 256
+				  }
+				}
+            },
+            "location" : {
+             "type" : "text",
+			"copy_to": "db_message",
+			"norms" : false,
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+            },
+            "longitude" : {
+              "type" : "text",
+			"copy_to": "db_message",
+			"norms" : false,
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+            }
+          }
+        },
+        "host" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "lastdr" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "lastipa" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "lastlocation" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "lastname" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "lastoperation" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "log_content" : {
+          "type" : "text",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "log_date" : {
+          "type" : "text",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "log_folder" : {
+          "type" : "text",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "log_name" : {
+          "type" : "text",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "log_time" : {
+          "type" : "text",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "message" : {
+          "type" : "text",
+          "norms" : false
+        },
+        "modified" : {
+          "type" : "date"
+        },
+        "name" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "path" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "posted" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "roleid" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "security" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "sequencenum" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "tags" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "todoid" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "type" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "userid" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "viewassignedto" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "viewcanumber" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "viewclass" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "viewcloseclass" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "viewcloselocation" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "viewcloseoperation" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "viewlocation" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "viewoperation" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "vieworiginator" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "viewproduct" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "viewstatus" : {
+          "type" : "text",
+		"copy_to": "db_message",
+          "norms" : false,
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        }
+      }
+    },
+    "_default_" : {
+      "dynamic_templates" : [
+        {
+          "message_field" : {
+            "path_match" : "message",
+            "match_mapping_type" : "string",
+            "mapping" : {
+              "norms" : false,
+              "type" : "text"
+            }
+          }
+        },
+        {
+          "string_fields" : {
+            "match" : "*",
+            "match_mapping_type" : "string",
+            "mapping" : {
+              "fields" : {
+                "keyword" : {
+                  "ignore_above" : 256,
+                  "type" : "keyword"
+                }
+              },
+              "norms" : false,
+              "type" : "text"
+            }
+          }
+        }
+      ],
+      "properties" : {
+        "@timestamp" : {
+          "type" : "date"
+        },
+        "@version" : {
+          "type" : "keyword"
+        },
+        "geoip" : {
+          "dynamic" : "true",
+          "properties" : {
+            "ip" : {
+              "type" : "text",
+			"copy_to": "db_message",
+			"norms" : false,
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+            },
+            "latitude" : {
+              "type" : "text",
+			"copy_to": "db_message",
+			"norms" : false,
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+            },
+            "location" : {
+              "type" : "text",
+			"copy_to": "db_message",
+			"norms" : false,
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+            },
+            "longitude" : {
+			"type" : "text",
+			"copy_to": "db_message",
+			"norms" : false,
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+            }
+          }
+        }
+      }
+    }
+  }
+}
