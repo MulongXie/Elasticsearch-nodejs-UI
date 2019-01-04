@@ -44,18 +44,19 @@ function router() {
             var response = {};  // the final return response
             if(result){
                 // return variables
-                var disp = '';  // the table on website
+                var disp = {};  // the table on website
                 var draw_data = {};  // the data for drawing diagram
                 // show all or show details
                 if(search['show_all']){
                     disp = ui.disp_overview(result, draw_data);
                 }
                 else{
-                    disp += ui.disp_detail(result, keycontent);
+                    disp = ui.disp_detail(result, keycontent);
+                    console.log(disp);
                 }
 
                 // 3. gather the results
-                disp += "<p style='background-color: #00B7FF '>Download Logs to View More Details</p>";
+                // disp += "<p style='background-color: #00B7FF '>Download Logs to View More Details</p>";
                 response['disp'] = disp;
                 response['draw_data'] = draw_data;
                 response['status'] = 1;

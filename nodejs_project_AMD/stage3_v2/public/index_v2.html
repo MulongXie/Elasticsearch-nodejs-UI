@@ -34,13 +34,19 @@
             height: 30px;
             font-family: "Century Gothic";
         }
-        #nav_bar button.active{
-            background-color: #00B7FF;
+
+        #nav_data_source{
+            margin-top: 0;
+            float: left;
+            width: 8%;
+            margin-left: auto;
+
+            display: none;
         }
 
         #rt{
             max-height: 86%;
-            max-width: 80%;
+            max-width: 77%;
             padding: 10px;
             overflow-y: auto;
             overflow-x: auto;
@@ -49,16 +55,9 @@
             background-color: #00B7FF;
         }
 
-        #data_source{
-            border: 0;
-            float: left;
-            width: 8%;
-            height: 200px;
-            margin-left: auto;
-        }
         ul{
             padding-left: 0;
-            padding-top: 0;
+            margin-top: 0;
         }
         li{
             padding-top: 0;
@@ -70,6 +69,9 @@
 
         button{
             font-family: "Yu Gothic UI";
+        }
+        button.active{
+              background-color: #00B7FF;
         }
         button:hover{
             background-color: #00B7FF;
@@ -139,30 +141,29 @@
 
 <div align="center">
     <div id="nav_bar">
-        <button id="show_table" class="active">Table</button>
-        <button id="show_plot">Diagram</button>
+        <button id="butt_table" class="active">Table</button>
+        <button id="butt_plot">Diagram</button>
     </div>
 </div>
 
 <div id="rt_container">
-    <div id="data_source">
+    <div id="nav_data_source">
         <ul style="list-style-type: none">
-            <li><button id="show_text">Text File</button></li>
-            <li><button id="show_db">Database</button></li>
-            <li><button id="show_pdf">PDF</button></li>
+            <li><button id="butt_text" class="active">Text File</button></li>
+            <li><button id="butt_db">Database</button></li>
         </ul>
     </div>
 
     <div id="rt" class="result_table" align="center">
-        <div id="disp_table" style="display: block"></div>
+        <div id="disp_table" style="display: block">
+            <div id="table_txt" style="display: block"></div>
+            <div id="table_db" style="display: none;"></div>
+        </div>
         <div id="disp_plot" style="display: none"></div>
         <div id="search_failed"></div>
     </div>
 
 </div>
-
-
-
 
 
 <script type="application/javascript">
@@ -178,17 +179,19 @@
                 // parse the string data into Json
                 var data_json = eval('(' + data + ')');
                 document.getElementById('folder_name').innerText = 'Current Folder: All logs and database on server';
-                document.getElementById('disp_table').innerHTML = data_json['disp'];
+                document.getElementById('table_txt').innerHTML = data_json['disp']['txt'];
+                document.getElementById('table_db').innerHTML = data_json['disp']['db'];
 
                 document.getElementById('rt').style.display = 'block';
                 document.getElementById('rt').style.backgroundColor = '#00B7FF';
                 document.getElementById('nav_bar').style.display = 'block';
+                document.getElementById('nav_data_source').style.display = 'block';
                 document.getElementById('search_failed').style.display = 'none';
                 document.getElementById('disp_table').style.display = 'block';
                 document.getElementById('disp_plot').style.display = 'none';
 
-                document.getElementById('show_table').className = 'active';
-                document.getElementById('show_plot').className = '';
+                document.getElementById('butt_table').className = 'active';
+                document.getElementById('butt_plot').className = '';
 
                 plot(data_json['draw_data']);
             }
@@ -212,16 +215,18 @@
 
                     var folder = document.getElementById('folder').value;
                     document.getElementById('folder_name').innerText = 'Current Folder: ' + folder;
-                    document.getElementById('disp_table').innerHTML = data_json['disp'];
+                    document.getElementById('table_txt').innerHTML = data_json['disp']['txt'];
+                    document.getElementById('table_db').innerHTML = data_json['disp']['db'];
 
                     document.getElementById('rt').style.backgroundColor = '#00B7FF';
                     document.getElementById('nav_bar').style.display = 'block';
+                    document.getElementById('nav_data_source').style.display = 'block';
                     document.getElementById('search_failed').style.display = 'none';
                     document.getElementById('disp_table').style.display = 'block';
                     document.getElementById('disp_plot').style.display = 'none';
 
-                    document.getElementById('show_table').className = 'active';
-                    document.getElementById('show_plot').className = '';
+                    document.getElementById('butt_table').className = 'active';
+                    document.getElementById('butt_plot').className = '';
 
                     plot(data_json['draw_data']);
                 }
@@ -302,12 +307,14 @@
         // top navigator
         var table = document.getElementById('disp_table');
         var plot = document.getElementById('disp_plot');
-        var butt_tab = document.getElementById('show_table');
-        var butt_plot = document.getElementById('show_plot');
+        var butt_tab = document.getElementById('butt_table');
+        var butt_plot = document.getElementById('butt_plot');
 
         butt_tab.onclick = function () {
             table.style.display = 'block';
             plot.style.display = 'none';
+            document.getElementById('nav_data_source').style.display = 'block';
+
             butt_plot.className = '';
             this.className = 'active';
 
@@ -316,6 +323,8 @@
         butt_plot.onclick = function () {
             table.style.display = 'none';
             plot.style.display = 'block';
+            document.getElementById('nav_data_source').style.display = 'none';
+
             butt_tab.className = '';
             this.className = 'active';
 
@@ -325,10 +334,19 @@
         // left side navigator
         var table_text = document.getElementById('table_txt');
         var table_db = document.getElementById('table_db');
-        var butt_text = document.getElementById('show_text');
-        var butt_db = document.getElementById('show_db');
+        var butt_text = document.getElementById('butt_text');
+        var butt_db = document.getElementById('butt_db');
         butt_text.onclick = function () {
+            table_text.style.display = 'block';
+            table_db.style.display = 'none';
+            butt_db.className = '';
+            this.className = 'active';
+        };
+        butt_db.onclick = function () {
             table_text.style.display = 'none';
+            table_db.style.display = 'block';
+            butt_text.className = '';
+            this.className = 'active';
         }
     }
 </script>

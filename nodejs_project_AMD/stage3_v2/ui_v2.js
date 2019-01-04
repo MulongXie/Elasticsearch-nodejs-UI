@@ -9,7 +9,7 @@
 function disp_overview(result, draw_data){
     var type = result.aggregations.type.buckets;
 
-    var overview;
+    var overview = {};
     var overview_txt = "<table id='over_txt' border='0' align='center'><tr><th>Log Folder</th><th>Log Name</th><th>Log Results Amount</th><th>Folder Results Amount</th></tr>"; // table of txt
     var overview_db = "<table id='over_db' border='0' align='center'><tr><th>Database Name</th><th>Data Amount</th></tr>"; // table of db
 
@@ -42,7 +42,8 @@ function disp_overview(result, draw_data){
         }
     }
     overview_db += "</table><br>";
-    overview = overview_db + overview_txt;
+    overview['txt'] = overview_txt;
+    overview['db'] = overview_db;
 
     return overview;
 }
@@ -123,7 +124,11 @@ function disp_detail(result, keyword){
     table_txt += "</table>";
     table_db += "</table>";
 
-    return table_txt + "<br>" + table_db;
+    var detail_table = {};
+    detail_table['db'] = table_db;
+    detail_table['txt'] = table_txt;
+
+    return detail_table;
 }
 
 exports.disp_overview = disp_overview;
