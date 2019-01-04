@@ -43,15 +43,22 @@ function queryFunc(keyword, flag, folder=false) {
                             ]
                         }
                     },
-                    aggs:{
-                        count_folder:{
-                            terms:{
-                                "field": "log_folder.keyword"
+                    aggs: {
+                        type: {
+                            terms: {
+                                "field": "type.keyword"
                             },
-                            aggs:{
-                                count_log:{
-                                    terms:{
-                                        "field": "log_name.keyword"
+                            aggs: {
+                                folder: {
+                                    terms: {
+                                        "field": "log_folder.keyword"
+                                    },
+                                    aggs: {
+                                        log: {
+                                            terms: {
+                                                "field": "log_name.keyword"
+                                            }
+                                        }
                                     }
                                 }
                             }

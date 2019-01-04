@@ -1,10 +1,6 @@
-// *** 1/2/2019 ***
-// UI module independent from router
-
-// *** 1/3/2019 ***
-// *** version 5 ***
-// Show all for both database and txt files
-// Show detail for both database and txt files in the same page
+// *** s3 v2 ***
+// *** 1/4/2019 ***
+// split the result of different data source into different pages
 
 function disp_overview(result, draw_data){
     var type = result.aggregations.type.buckets;

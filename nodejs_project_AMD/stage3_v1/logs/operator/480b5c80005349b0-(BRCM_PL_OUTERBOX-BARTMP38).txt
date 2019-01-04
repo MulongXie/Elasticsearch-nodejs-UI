@@ -1,620 +1,0 @@
-[INFO][23-Jun-2017 23:58:13]        : [L2][R0]   -------------------------------------------------
-[INFO][23-Jun-2017 23:58:13]        : [L2][R0]   Execution Trace - Printing System Logic Controller - v2.9
-[INFO][23-Jun-2017 23:58:13]        : [L2][R0]   Printing System: V4.5.45605.0006b
-[INFO][23-Jun-2017 23:58:13]        : [L2][R0]   Thread Number: 1
-[INFO][23-Jun-2017 23:58:13]        : [L2][R0]   -------------------------------------------------
-[INFO][23-Jun-2017 23:58:13]        : [L2][R0]   
-[INFO][23-Jun-2017 23:58:13]        : [L2][R0]   Executing PrintData Request: 480b5c80005349b0
-[INFO][23-Jun-2017 23:58:13]        : [L2][R0]   Retrieving PrintData, PrintDataItems, PrintDataItemParameters
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]     + BEGIN: PrintDataManager.RetrievePrintData
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]     Querying PrintData from DB
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]       Setting PrintData object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]       Calling function: RetrievePrintDataItems 
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]          + BEGIN: PrintDataManager.RetrievePrintDataItems
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]          Querying PrintDataItems from DB
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintDataItem object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Calling function: RetrievePrintDataItemParameters
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]               + BEGIN: PrintDataManager.RetrievePrintDataItemParameters
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]               Querying PrintDataItemParameters from DB
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]                 Adding PrintDataItemParameter[CONTAINERNAME] object to PrintDataItemParameterList
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]                 Adding PrintDataItemParameter[QTY] object to PrintDataItemParameterList
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]                 Adding PrintDataItemParameter[LPN] object to PrintDataItemParameterList
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]                 Adding PrintDataItemParameter[FINALLOT] object to PrintDataItemParameterList
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]               - COMPLETE: PrintDataManager.RetrievePrintDataItemParameters
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintDataItemParameterList object to PrintDataItem object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintDataItem object to PrintDataItemList object
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]          - COMPLETE: PrintDataManager.RetrievePrintDataItems
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]       Adding PrintDataItemList object to PrintData object
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]     - COMPLETE: PrintDataManager.RetrievePrintData
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]     Creating XML document
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]     Adding Factory, PrintData, ComputerName, Action object values
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]     Submitting XML document
-[INFO][23-Jun-2017 23:58:13]        : [L2][R0]   Processing PrintDataItem: 480b5580006a82ce
-[INFO][23-Jun-2017 23:58:13]        : [L2][R0]   Retrieving PrintingSetup: BRCM_PL_OUTERBOX(48043c800000a89e)
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]     + BEGIN: PrintingSetupManager.RetrievePrintingSetup
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]     Querying PrintingSetup from DB
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]       Setting PrintingSetup object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]       Calling function: RetrievePrintingSetupQueries 
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]          + BEGIN: PrintingSetupManager.RetrievePrintingSetupQueries
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]          Querying PrintingSetupQueries from DB
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupQuery object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupQuery object to PrintingSetupQueryList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupQuery object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupQuery object to PrintingSetupQueryList object
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]          - COMPLETE: PrintingSetupManager.RetrievePrintingSetupQueries
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]       Calling function: RetrievePrintingSetupParameters 
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]          + BEGIN: PrintingSetupManager.RetrievePrintingSetupParameters
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]          Querying PrintingSetupParameters from DB
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Setting PrintingSetupParameter object with DB data
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]            Adding PrintingSetupParameter object to PrintingSetupParameterList object
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]          - COMPLETE: PrintingSetupManager.RetrievePrintingSetupParameters
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]       Calling function: RetrievePrintingSetupSubsets 
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]          + BEGIN: PrintingSetupManager.RetrievePrintingSetupSubsets
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]          Querying PrintingSetupSubsets from DB
-[INFO][23-Jun-2017 23:58:13]        : [L3][R0]          - COMPLETE: PrintingSetupManager.RetrievePrintingSetupSubsets
-[INFO][23-Jun-2017 23:58:13]        : [L4][R0]       Adding QuerySet, ParameterSet, SubsetSet objects to PrintingSetup object
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - COMPLETE: PrintingSetupManager.RetrievePrintingSetup
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Calling function: ExecutePrintingSetup
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   ===================================
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Executing PrintingSetup: BRCM_PL_OUTERBOX
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Initializing base PrintSet object
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Updating base PrintSet object with input PrintDataItemParams(total params: 4)
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Resolving base PrintSet parameters
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: CONTAINERNAME [SKU223FP00A] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: SKU223FP00A
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: QTY [2520] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 2520
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: LPN [BS00016253] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: BS00016253
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: MARKETINGPART [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: TEMP [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: ROHS [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: DCODE [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: COO [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: COONAME [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: SEALDATE [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: MSL [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: 2LICAT [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: FINALLOT [SKU223FP00] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: SKU223FP00
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: WAFERLOT [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: FAB [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: CONTAINER [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: SPEC [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: SPECREVISION [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: FROMSPEC [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: FROMSPECREVISION [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: PACKINGTYPE [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: BOXQTY [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: BOXNUMBER [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: BOXCOUNT [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: SYSDATE [23-Jun-2017 23:58:14] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 23-Jun-2017 23:58:14
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: HISTORYMAINLINEID [] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: DATE [23-Jun-2017] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 23-Jun-2017
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: TIME [23:58:14] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: 23:58:14
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: USERNAME [apps_insitepng] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: apps_insitepng
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: FORMATFILE [D:\Label\BRCM\BRCM_PL_WAFER.DWN] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: D:\Label\BRCM\BRCM_PL_WAFER.DWN
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: CDONAME [Printing] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: Printing
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + Resolving Parameter: CALLBYCDONAME [Printing] (AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - Value Resolved: Printing
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Processing 1st SQL to determine number of printsets to clone
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Resolving 1st SQL
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     Resolving SQL: SELECT A.DATECODE , UPPER(A.COUNTRYOFORIGIN) AS COO, SUBSTR(A.DATECODE,LENGTH(A.DATECODE)-3, 4) AS DCODE, 
-REPLACE(REPLACE( convert (P.ROHSCOMPLIANCE,'us7ascii', 'utf8'), '?'), 'l', 'I') AS ROHS,
-P.AMDTEMPERATURE ||'C' AS TEMP, P.AMDMSLLEVEL AS MSL,
-CASE WHEN instr(P.AMDMARKETINGPARTNUMBER,'-')>0 AND ( P.TECHNOLOGY = 'STB' OR P.TECHNOLOGY = 'STBi') THEN
-substr(P.AMDMARKETINGPARTNUMBER,0, instr(P.AMDMARKETINGPARTNUMBER,'-')-1) ELSE P.AMDMARKETINGPARTNUMBER END AS MARKETINGPART ,
-P.BRANDNAME AS JEDECSYMBOL, A.FABLOTNUMBER AS WAFERLOT, A.P6 AS FAB,  A.P3 AS FINALLOT
-FROM A_LOTATTRIBUTES A, CONTAINER C, PRODUCT P, PRODUCTBASE PB
-WHERE A.CONTAINERID = C.CONTAINERID AND C.PRODUCTID = P.PRODUCTID AND P.PRODUCTBASEID = PB.PRODUCTBASEID
-AND C.CONTAINERNAME = '#CONTAINERNAME#'(AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     Resolved SQL: SELECT A.DATECODE , UPPER(A.COUNTRYOFORIGIN) AS COO, SUBSTR(A.DATECODE,LENGTH(A.DATECODE)-3, 4) AS DCODE, 
-REPLACE(REPLACE( convert (P.ROHSCOMPLIANCE,'us7ascii', 'utf8'), '?'), 'l', 'I') AS ROHS,
-P.AMDTEMPERATURE ||'C' AS TEMP, P.AMDMSLLEVEL AS MSL,
-CASE WHEN instr(P.AMDMARKETINGPARTNUMBER,'-')>0 AND ( P.TECHNOLOGY = 'STB' OR P.TECHNOLOGY = 'STBi') THEN
-substr(P.AMDMARKETINGPARTNUMBER,0, instr(P.AMDMARKETINGPARTNUMBER,'-')-1) ELSE P.AMDMARKETINGPARTNUMBER END AS MARKETINGPART ,
-P.BRANDNAME AS JEDECSYMBOL, A.FABLOTNUMBER AS WAFERLOT, A.P6 AS FAB,  A.P3 AS FINALLOT
-FROM A_LOTATTRIBUTES A, CONTAINER C, PRODUCT P, PRODUCTBASE PB
-WHERE A.CONTAINERID = C.CONTAINERID AND C.PRODUCTID = P.PRODUCTID AND P.PRODUCTBASEID = PB.PRODUCTBASEID
-AND C.CONTAINERNAME = 'SKU223FP00A'
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Executing 1st SQL
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Target printsets: 1
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Cloning target printsets
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Updating target printset parameters using data from 1st SQL
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Nullifying base printset to free memory
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Processing target printsets.
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]        Processing target printset: 1, SQL: 2
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]        ==========================
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]          Resolving SQL: SELECT TO_CHAR(SYSDATE, 'DD-MON-YYYY') AS SEALDATE FROM DUAL(AcceptBlankResult: False)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]          Resolved SQL: SELECT TO_CHAR(SYSDATE, 'DD-MON-YYYY') AS SEALDATE FROM DUAL
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]        ==========================
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   PrintingType: LABEL, calculating QTYPERBOX, BOXCOUNT, BOXNUMBER parameters 
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Using Custom QtyPerBox retrieval logic
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   BOXCOUNT: 1
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Cloning target printset to finalized printsets (based on BoxCount value) 
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   EnableBoxCountOffSet = False
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Nullifying target printsets to free memory
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Processing finalized printsets
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   +++++++++++++++++++++++++++++
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Processing Final PrintSet: 1
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Processing SQL(s), 1st SQL is skipped
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]        Processing target printset: 1, SQL: 2
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]        ==========================
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]          Resolving SQL: SELECT TO_CHAR(SYSDATE, 'DD-MON-YYYY') AS SEALDATE FROM DUAL(AcceptBlankResult: True)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]          Resolved SQL: SELECT TO_CHAR(SYSDATE, 'DD-MON-YYYY') AS SEALDATE FROM DUAL
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]          + Resolving Parameter: QTYPERBOX [2520] (AcceptBlankResult: True)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]          - Value Resolved: 2520
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   +++++++++++++++++++++++++++++
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     PRINTSET BATCH ID: 0
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     [PRINTSET: 1]
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       CONTAINERNAME        :: SKU223FP00A                    :: REQUIRED        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       QTY                  :: 2520                           :: REQUIRED        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       LPN                  :: BS00016253                     :: REQUIRED        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       MARKETINGPART        :: BCM63137VKFSBG                 :: INTERNAL        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       TEMP                 :: 245C                           :: INTERNAL        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       ROHS                 :: RoHS CompIiant and HaIogen Free :: INTERNAL        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       DCODE                :: 1722                           :: INTERNAL        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       COO                  :: KR                             :: INTERNAL        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       COONAME              ::                                :: INTERNAL        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       SEALDATE             :: 23-JUN-2017                    :: INTERNAL        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       MSL                  :: 4                              :: INTERNAL        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       2LICAT               ::                                :: INTERNAL        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       FINALLOT             :: SKU223FP00                     :: REQUIRED        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       WAFERLOT             :: TPV686.00                      :: INTERNAL        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       FAB                  :: TT                             :: INTERNAL        :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       CONTAINER            ::                                :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       SPEC                 ::                                :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       SPECREVISION         ::                                :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       FROMSPEC             ::                                :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       FROMSPECREVISION     ::                                :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       PACKINGTYPE          ::                                :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       BOXQTY               :: 2520                           :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       BOXNUMBER            :: 1                              :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       BOXCOUNT             :: 1                              :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       SYSDATE              :: 23-Jun-2017 23:58:14           :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       HISTORYMAINLINEID    ::                                :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       DATE                 :: 23-Jun-2017                    :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       TIME                 :: 23:58:14                       :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       USERNAME             :: apps_insitepng                 :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       FORMATFILE           :: D:\Label\BRCM\BRCM_PL_WAFER.DWN :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       CDONAME              :: Printing                       :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       CALLBYCDONAME        :: Printing                       :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L4][R0]       QTYPERBOX            :: 2520                           :: SYSTEM          :: RESOLVED(True)
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     + BEGIN: PrintingSetupManager.RetrievePrinter
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     Retrieving Printer details for PrinterID: 4805e5800000a780
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     - COMPLETE: PrintingSetupManager.RetrievePrinter
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     Transacting Label Print
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     Retrieving Setup Template File
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     Reading setup Template File
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     Merging template and printset [01] data
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     Appending single label data to label set data
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     Transacting to label printer, copies to print: 1
-[INFO][23-Jun-2017 23:58:14]        : [L6][R0]           =========================================
-[INFO][23-Jun-2017 23:58:14]        : [L6][R0]           Print Data: 
-[INFO][23-Jun-2017 23:58:14]        : [L6][R0]           =========================================
-[INFO][23-Jun-2017 23:58:14]        : [L6][R0]                
-P
-G13
-G12
-G11
-G10
-G9
-G8
-G7
-G6
-G5
-G4
-G3
-G2
-G1
-G0
-R
-C0
-k
-L300
-S30
-d10
-h0,0;
-l8
-F20
-D0
-T1
-t0
-W1000
-g1,567
-J0,0,0
-P
-G0;x19;y132;
-u0,@@@@C@@@@@@@@@@@@@@@@;
-u1,@@@@C@@@@@H@@@@@@@B@@;
-u2,@@@@@@@@@@@H@@@@@@@B@@;
-u3,faYX@pGLLHH|paCDND@@;
-u4,fqY\@pLLNHLfYsFD[D@@;
-u5,fqY\@XLCLNHDCBIRDDQD@@;
-u6,fqY\@XLCLNHDCBIRtOPD@@;
-u7,fyY^@HLCLOHDC@IRtOPD@@;
-u8,fiYZ@HLCLMHDC`IRdDPD@@;
-u9,fiYZ@HOCLMHDCpIRdD_D@@;
-u10,fmY[@HOlMHDCxHRdDYD@@;
-u11,fmY[@HOlMHDCxHRdDYD@@;
-u12,feYY@H@ClLHDCLHRDEQD@@;
-u13,feYY@H@ClLHDCFHRDEQD@@;
-u14,fgyY@H@C|LHDCFHRDEQD@@;
-u15,fcyX@XLC\LNLCFISFFQD@@;
-u16,fcyX@XLC\LLHCFYsFF[F@@;
-u17,fcyX@pG\LHHC|qaCFNB@@;
-u18,@@@@@`C@@@@H@x@@@@@B@@;
-R
-P
-G1;x16;y36;
-u0,|qO|Q@;
-u1,dqLLQ@;
-u2,FY\FC@;
-u3,F[\FC@;
-u4,FXPFB@;
-u5,FXPFB@;
-u6,FXPFB@;
-u7,FXPFB@;
-u8,FXPFB@;
-u9,FXPFR@;
-u10,FXPFR@;
-u11,FYPFB@;
-u12,FY\FC@;
-u13,FQ\DC@;
-u14,|qO|A@;
-u15,x`Cx@@;
-R
-P
-G2;x16;y102;
-u0,|pCKB`OXayQ@@@@@@;
-u1,fYbMB`_lqLQ@@@@@@;
-u2,BIbHB`qDQDA@@@@@@;
-u3,BI`HB`qDQD@@@@@@@;
-u4,@I`IB`aLQD@@@@@@@;
-u5,`yGOB`axQ|C@@@@@@;
-u6,pIFHB`a@QDC@@@@@@;
-u7,xHbHB`aDQDA@@@@@@;
-u8,xHbHB`aDQDA@@@@@@;
-u9,LXbIB`aLQLQ@@@@@@;
-u10,FpCOB`axyyQ@@@@@@;
-u11,F@@@B`q@P@@@@@@@@;
-u12,FA@@B`q@P@@@@@@@@;
-u13,FA@@B`Q@@@@@@@@@@;
-u14,|A@@B`_@@@@@@@@@@;
-u15,x@@@@@@@@@@@@@@@@;
-R
-P
-G3;x16;y102;
-u0,FB~YFA|a_|pg@@@@@;
-u1,FB~YFA|c_fQf@@@@@;
-u2,FBFXFALfABYD@@@@@;
-u3,FBFXNALfABYL@@@@@;
-u4,FBFXKALdA@Y@@@@@@;
-u5,FBFXIALdA`Y@@@@@@;
-u6,FBFXIALdApY@@@@@@;
-u7,FB~YYALd_xX@@@@@@;
-u8,FB~YYALd_xX@@@@@@;
-u9,FBFXQALdALX`@@@@@;
-u10,FBFxQALdAFX`@@@@@;
-u11,FBFxPALfAFXD@@@@@;
-u12,FBFxpALfAFYD@@@@@;
-u13,FBFx`ALbAFYD@@@@@;
-u14,v_~y`A|c_|qG@@@@@;
-u15,@@@@@@@@@x`C@@@@@;
-R
-P
-G4;x18;y66;
-u0,D@@D@`@@@@@;
-u1,D@@D@`@@@@@;
-u2,DBCHp`ppD@@;
-u3,FBCHp`pxD@@;
-u4,BBCHp@qx@@@;
-u5,BBCHp@qx@@@;
-u6,BBCHp@q|@@@;
-u7,BBCHp@qt@@@;
-u8,BBOHpCqt@@@;
-u9,BBHpOrv@@@;
-u10,BBHpOrv@@@;
-u11,BBcHpHrrD@@;
-u12,BBcIpXrrD@@;
-u13,BBcIpXrs@@@;
-u14,fCcIpXtq@@@;
-u15,DCcLpHtq@@@;
-u16,DBDpOtq@@@;
-u17,D@@D@@@@@@@;
-R
-P
-G5;x16;y36;
-u0,~yGDD@;
-u1,~YFDD@;
-u2,FLND@@;
-u3,FLND@@;
-u4,FLHD@@;
-u5,FLHD@@;
-u6,FLHD@@;
-u7,FLHD@@;
-u8,FLHD@@;
-u9,FLHDD@;
-u10,FLHDD@;
-u11,FLHD@@;
-u12,FLND@@;
-u13,FHND@@;
-u14,Fxg@@;
-u15,@pA@@@;
-R
-P
-G6;x15;y66;
-u0,HHXqxa@~yaE;
-u1,\\lqLa@~MqD;
-u2,TTDqDa@FDQ@;
-u3,TTDqD`@FDS@;
-u4,TTLqD`@FDS@;
-u5,TTxq|g@FDS@;
-u6,tt@qDg@FDS@;
-u7,ffDqDaAFDQ@;
-u8,ffDqDaAFDQ@;
-u9,ffLqLaAFLQD;
-u10,bbxyyaFFxyE;
-u11,bb@p@@@F@P@;
-u12,bbAp@@@F@P@;
-u13,ccAp@@@F@@@;
-u14,CCA`A@@F@@@;
-R
-P
-G7;x18;y66;
-u0,D@D@@@@@@@@;
-u1,D@D@@@@@@@@;
-u2,DI~GADD@@@;
-u3,F[IvEADD@@@;
-u4,bqHCCAD@@@@;
-u5,bqHCCAD@@@@;
-u6,bqHCCAD@@@@;
-u7,bpHACAD@@@@;
-u8,bpHACAL@@@@;
-u9,bpHACAN@@@@;
-u10,bpHACAN@@@@;
-u11,bpHACAJD@@@;
-u12,bpHACAZD@@@;
-u13,bpHACAS@@@@;
-u14,fqHCCAS@@@@;
-u15,dqLCCAq@@@@;
-u16,D_D~yoa@@@@;
-u17,DND|@@@@@@@;
-R
-P
-G8;x18;y66;
-u0,D@@H@@@@@@@;
-u1,D@@H@@@@@@@;
-u2,DG_p|A_B@@@;
-u3,fMp|CYB@@@;
-u4,bHcqLfQ@@@@;
-u5,BHcqLfq@@@@;
-u6,BHCqLdA@@@@;
-u7,BHCqLdA@@@@;
-u8,bOCqLdA@@@@;
-u9,bLCqLdA@@@@;
-u10,bLCqLdA@@@@;
-u11,bHCqLdAB@@@;
-u12,bHCqLdAB@@@;
-u13,bHcqLfQ@@@@;
-u14,fHcqLfQ@@@@;
-u15,dMcxLbQ@@@@;
-u16,DGH|C_@@@@;
-u17,D@@H@@N@@@@;
-R
-P
-G9;x15;y102;
-u0,fQF|p@C~YFq@A@@@@;
-u1,fQDlp@C~YFq@A@@@@;
-u2,fQDdY@CFXFq@@@@@@;
-u3,fS|GY@CFXNq@@@@@@;
-u4,vR|GI@CFXKq@@@@@@;
-u5,VRHFO@CFXIq@@@@@@;
-u6,VRHBF@CFXIqC@@@@@;
-u7,VVHBF@C~YYqO@@@@@;
-u8,VVHBF@C~YYqO@@@@@;
-u9,VTXCF@CFXQqHA@@@@;
-u10,^TXCO@CFxQqXA@@@@;
-u11,NTPAI@CFxPqX@@@@@;
-u12,N\PaY@CFxpqX@@@@@;
-u13,NXPaQ@CFx`qH@@@@@;
-u14,NXpaPx_~y`qO@@@@@;
-R
-P
-G10;x16;y36;
-u0,fQxc_A;
-u1,fQ\f_A;
-u2,fQDdA@;
-u3,fSDdA@;
-u4,vR@dA@;
-u5,VR@fA@;
-u6,VR@gA@;
-u7,VV`cA@;
-u8,VV`cA@;
-u9,VTx`AA;
-u10,^T\`AA;
-u11,NT\`A@;
-u12,N\\dA@;
-u13,NX\dA@;
-u14,NXxgA@;
-u15,@@`C@@;
-R
-P
-G11;x16;y66;
-u0,~|[`_CFAA@@;
-u1,~|[`XBFAA@@;
-u2,FLXpPBBA@@@;
-u3,DLXpp~CA@@@;
-u4,LLXp@~CA@@@;
-u5,HLXp@DCA@@@;
-u6,XLXp@DAA@@@;
-u7,PLXp@DAA@@@;
-u8,PLXp@DAA@@@;
-u9,pLXp@lAAA@@;
-u10,pLXp@lAAA@@;
-u11,bLXpPh@A@@@;
-u12,bLXpPh@A@@@;
-u13,vLXpPh@A@@@;
-u14,\LX`_xxO@@@;
-u15,@@@@O@@@@@@;
-R
-P
-G12;x19;y102;
-u0,@@@@@@@@@H@@@@@@@;
-u1,@@@@@@@@@H@@@@@@@;
-u2,@@@`@@@@@H@@@@@@@;
-u3,@@@`@@@@@H@@@@@@@;
-u4,BXQgp_xQDic@@@@@@;
-u5,BlqdpLQDYb@@@@@@;
-u6,BDqDqxDQDYF@@@@@@;
-u7,BDQLq`DQDIF@@@@@@;
-u8,BLQLq`DQDIF@@@@@@;
-u9,BxQLqxDQDIF@@@@@@;
-u10,B@QLqxDQDIF@@@@@@;
-u11,~DqLrGDQDYB@@@@@@;
-u12,~DqLrGDQDYB@@@@@@;
-u13,BLqDr\DqfYb@@@@@@;
-u14,BxQGrxDQhc@@@@@@;
-u15,B@P@rx@@@@@@@@@@@;
-u16,B@P@tx@@@@@@@@@@@;
-u17,B@P@tX@@@@@@@@@@@;
-u18,~@P@t_@@@@@@@@@@@;
-R
-P
-E6;F6;
-L1;
-D0;
-U0;o238,841;f0;c0;w1;h1;
-D1;
-U1;o156,847;f0;c1;w1;h1;
-U2;o100,850;f0;c2;w1;h1;
-U3;o240,236;f0;c3;w1;h1;
-U4;o208,236;f0;c4;w1;h1;
-U5;o142,236;f0;c5;w1;h1;
-U6;o75,234;f0;c6;w1;h1;
-U7;o73,628;f0;c7;w1;h1;
-U8;o140,683;f0;c8;w1;h1;
-U9;o5,545;f0;c9;w1;h1;
-U10;o8,850;f0;c10;w1;h1;
-H11;o15,41;f0;c15;h1;w1;d0,13;
-B12;o8,110;f0;c6,0;h80;w1;r0;i0;d0,13;
-H13;o231,294;f3;c18;h1;w1;d0,27;
-H14;o26,236;f3;c18;h1;w1;d0,42;
-H15;o95,682;f3;c18;h1;w1;d0,12;
-H16;o163,736;f3;c18;h1;w1;d0,12;
-H17;o28,889;f3;c18;h1;w1;d0,7;
-H18;o94,850;f3;c18;h1;w1;d0,22;
-H19;o26,626;f3;c18;h1;w1;d0,7;
-U20;o6,703;f0;c11;w1;h1;
-H21;o153,849;f3;c18;h1;w1;d0,12;
-B22;o134,686;f3;c0,6;h40;w1;r0;i0;d0,12;
-B23;o70,629;f3;c0,6;h40;w1;r0;i0;d0,12;
-B24;o203,241;f3;c0,6;h40;w1;r0;i0;d0,27;
-H25;o26,759;f3;c18;h1;w1;d0,12;
-H26;o161,270;f3;c18;h1;w1;d0,13;
-B27;o135,241;f3;c0,6;h40;w1;r1;i0;d0,13;
-U28;o211,838;f0;c12;w1;h1;
-H29;o235,913;f3;c18;h1;w1;d0,7;
-B30;o210,898;f3;c0,6;h40;w1;r2;i0;d0,7;
-H31;o94,307;f3;c18;h1;w1;d0,17;
-B32;o68,241;f3;c0,6;h40;w1;r1;i0;d0,17;
-R
-E6
-
-F11BS00016253
-F12BS00016253
-F13BCM63137VKFSBG
-F14RoHS CompIiant and HaIogen Free
-F152520
-F161722
-F174
-F1823-JUN-2017
-F19245C
-F21KR
-F229D1722
-F23Q2520
-F241PBCM63137VKFSBG
-F25
-F26SKU223FP00
-F27SKU223FP00
-F29TT
-F30TT
-F31TPV686.00
-F32TPV686.00
-11
-
-[INFO][23-Jun-2017 23:58:14]        : [L6][R0]           -----------------------------------------
-[INFO][23-Jun-2017 23:58:14]        : [L5][R0]         Sending label data to: \\pngjvprn64a\BARTMP38
-[INFO][23-Jun-2017 23:58:14]        : [L5][R0]         Opening printer
-[INFO][23-Jun-2017 23:58:14]        : [L5][R0]         Gathering Image Data
-[INFO][23-Jun-2017 23:58:14]        : [L5][R0]         Writing to print spool
-[INFO][23-Jun-2017 23:58:14]        : [L5][R0]         Closing printer
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   ------------------------------------------------------------------------------------------------
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     Creating XML document
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     Adding Factory, PrintData, ComputerName, Action object values
-[INFO][23-Jun-2017 23:58:14]        : [L3][R0]     Submitting XML document
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Complete PrintData Request: 480b5c80005349b0
-[INFO][23-Jun-2017 23:58:14]        : [L2][R0]   Closing thread: 1
-[INFO][23-Jun-2017 23:58:21]        : [L3][R0]     Executing - 480b5c800053499c
