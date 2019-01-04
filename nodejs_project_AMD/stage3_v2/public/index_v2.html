@@ -37,20 +37,25 @@
 
         #nav_data_source{
             margin-top: 0;
+            margin-right: 0;
+            padding-right: 0;
             float: left;
             width: 8%;
-            margin-left: auto;
 
             display: none;
         }
 
+        #rt_shell{
+            width: 96%;
+        }
+
         #rt{
             max-height: 86%;
-            max-width: 77%;
+            max-width: 92%;
             padding: 10px;
             overflow-y: auto;
             overflow-x: auto;
-            margin: 0 7% 0 7%;
+            margin: 0;
             display: none;
             background-color: #00B7FF;
         }
@@ -146,23 +151,24 @@
     </div>
 </div>
 
-<div id="rt_container">
-    <div id="nav_data_source">
-        <ul style="list-style-type: none">
-            <li><button id="butt_text" class="active">Text File</button></li>
-            <li><button id="butt_db">Database</button></li>
-        </ul>
-    </div>
-
-    <div id="rt" class="result_table" align="center">
-        <div id="disp_table" style="display: block">
-            <div id="table_txt" style="display: block"></div>
-            <div id="table_db" style="display: none;"></div>
+<div id="rt_container" align="center">
+    <div id="rt_shell">
+        <div id="nav_data_source">
+            <ul style="list-style-type: none">
+                <li><button id="butt_text" class="active">Text File</button></li>
+                <li><button id="butt_db">Database</button></li>
+            </ul>
         </div>
-        <div id="disp_plot" style="display: none"></div>
-        <div id="search_failed"></div>
-    </div>
 
+        <div id="rt" align="center">
+            <div id="disp_table" style="display: block">
+                <div id="table_txt" style="display: block"></div>
+                <div id="table_db" style="display: none;"></div>
+            </div>
+            <div id="disp_plot" style="display: none" align="center"></div>
+            <div id="search_failed"></div>
+        </div>
+    </div>
 </div>
 
 
@@ -178,10 +184,12 @@
             success: function (data) {
                 // parse the string data into Json
                 var data_json = eval('(' + data + ')');
+                // display result
                 document.getElementById('folder_name').innerText = 'Current Folder: All logs and database on server';
                 document.getElementById('table_txt').innerHTML = data_json['disp']['txt'];
                 document.getElementById('table_db').innerHTML = data_json['disp']['db'];
 
+                // change display area
                 document.getElementById('rt').style.display = 'block';
                 document.getElementById('rt').style.backgroundColor = '#00B7FF';
                 document.getElementById('nav_bar').style.display = 'block';
@@ -190,6 +198,7 @@
                 document.getElementById('disp_table').style.display = 'block';
                 document.getElementById('disp_plot').style.display = 'none';
 
+                // change button status
                 document.getElementById('butt_table').className = 'active';
                 document.getElementById('butt_plot').className = '';
 
@@ -212,12 +221,13 @@
                 var data_json = eval('(' + data + ')');
 
                 if (data_json['status'] === 1){
-
+                    // display result
                     var folder = document.getElementById('folder').value;
                     document.getElementById('folder_name').innerText = 'Current Folder: ' + folder;
                     document.getElementById('table_txt').innerHTML = data_json['disp']['txt'];
                     document.getElementById('table_db').innerHTML = data_json['disp']['db'];
 
+                    // change display area
                     document.getElementById('rt').style.backgroundColor = '#00B7FF';
                     document.getElementById('nav_bar').style.display = 'block';
                     document.getElementById('nav_data_source').style.display = 'block';
@@ -225,6 +235,7 @@
                     document.getElementById('disp_table').style.display = 'block';
                     document.getElementById('disp_plot').style.display = 'none';
 
+                    // change button status
                     document.getElementById('butt_table').className = 'active';
                     document.getElementById('butt_plot').className = '';
 
@@ -236,6 +247,7 @@
 
                     document.getElementById('rt').style.backgroundColor = 'transparent';
                     document.getElementById('nav_bar').style.display = 'none';
+                    document.getElementById('nav_data_source').style.display = 'none';
                     document.getElementById('search_failed').style.display = 'block';
                     document.getElementById('disp_table').style.display = 'none';
                     document.getElementById('disp_plot').style.display = 'none';
@@ -311,20 +323,24 @@
         var butt_plot = document.getElementById('butt_plot');
 
         butt_tab.onclick = function () {
+            // display area
             table.style.display = 'block';
             plot.style.display = 'none';
             document.getElementById('nav_data_source').style.display = 'block';
 
+            // change button status
             butt_plot.className = '';
             this.className = 'active';
 
             document.getElementById('rt').style.backgroundColor = '#00BBFF';
         };
         butt_plot.onclick = function () {
+            // display area
             table.style.display = 'none';
             plot.style.display = 'block';
             document.getElementById('nav_data_source').style.display = 'none';
 
+            // change button status
             butt_tab.className = '';
             this.className = 'active';
 

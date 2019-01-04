@@ -51,8 +51,11 @@ function router() {
                     disp = ui.disp_overview(result, draw_data);
                 }
                 else{
+                    var overview = ui.disp_overview(result, draw_data);
                     disp = ui.disp_detail(result, keycontent);
-                    console.log(disp);
+
+                    disp['txt'] = overview['txt'] + disp['txt'];
+                    disp['db'] = overview['db'] + disp['db'];
                 }
 
                 // 3. gather the results

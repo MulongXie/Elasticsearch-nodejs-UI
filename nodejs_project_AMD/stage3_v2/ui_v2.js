@@ -13,11 +13,16 @@ function disp_overview(result, draw_data){
     var overview_txt = "<table id='over_txt' border='0' align='center'><tr><th>Log Folder</th><th>Log Name</th><th>Log Results Amount</th><th>Folder Results Amount</th></tr>"; // table of txt
     var overview_db = "<table id='over_db' border='0' align='center'><tr><th>Database Name</th><th>Data Amount</th></tr>"; // table of db
 
-    for (var i = 0; i < type.length; i++){
+    var exist_txt = false;
+    var exist_db = false;
 
+    // for database data, type is the name of table
+    // for all text files, their types are 'txt'
+    for (var i = 0; i < type.length; i++){
         // overview of txt files
         if (type[i].key === 'txt'){
             var count_folder = type[i].folder.buckets;
+
             for (var j = 0; j < count_folder.length; j++){
                 var count_log = count_folder[j].log.buckets;
 
@@ -31,17 +36,25 @@ function disp_overview(result, draw_data){
                     overview_txt += "<td align='center'>" + count_log[k].doc_count + "</td></tr>";
                     draw_data [count_log[k].key] = count_log[k].doc_count;
                 }
-
             }
             overview_txt += "</table><br>";
+            exist_txt = true;
         }
         // overall of database
         else{
-            overview_db += "<tr><td align='center'><b>" + type[i].key + "</b></td><td align='center'>" + type[i].doc_count + "</td>"
+            overview_db += "<tr><td align='center'><b>" + type[i].key + "</b></td><td align='center'>" + type[i].doc_count + "</td>";
             draw_data ["DB_" + type[i].key] = type[i].doc_count;
+            exist_db = true;
         }
     }
     overview_db += "</table><br>";
+
+    if (!exist_txt){
+        overview_txt = "<h3>No Result for Given Keyword in Log Folders</h3>"
+    }
+    if (!exist_db){
+        overview_db = "<h3>No Result for Given Keyword in Database</h3>"
+    }
     overview['txt'] = overview_txt;
     overview['db'] = overview_db;
 
@@ -77,7 +90,7 @@ function disp_txt(hit, keycontent, no_txt){
 }
 
 
-function disp_db(hit, no_db){
+function disp_db(hit, keyword, no_db){
 
     var disp_content = "<tr><td align='center'>" + no_db + "</td>";
     disp_content += "<td align='center'>" + hit._source.type + "</td>";
@@ -87,6 +100,10 @@ function disp_db(hit, no_db){
     }
     disp_content += "</td></tr>";
 
+    // highlight keywords
+    var keyreg = new RegExp(keyword, 'ig');
+    disp_content = disp_content.replace(keyreg, '<mark>' + keyword + '</mark>');
+
     return disp_content;
 }
 
@@ -95,13 +112,15 @@ function disp_detail(result, keyword){
     var hits = result.hits.hits;
     var table_txt = "<table id='table_txt' border='0'><tr><th>Number</th><th>Log Folder</th><th>Log Name</th><th>Log Date</th><th>Log Time</th><th>Message</th></tr>";
     var table_db = "<table id='table_db' border='0'><tr><th>No.</th><th>Database</th><th>Content</th></tr>"
-    var no_txt = 1;
-    var no_db = 1;
+    var no_txt = 0;
+    var no_db = 0;
+
+    // restrict display time for each log file
+    var disp_time_limit = 3;
+    var used_log = [];  // record the logs that display more than limit time
+    var disp_time = 0;
     for(var i = 0; i < hits.length; i++){
 
-        var disp_time_limit = 3;
-        var used_log = [];  // record the logs that display more than limit time
-        var disp_time = 0;
         if(hits[i]._source.type === 'txt'){
             // skip the used names
             var log_name = hits[i]._source.log_name;
@@ -117,12 +136,26 @@ function disp_detail(result, keyword){
             no_txt += 1;
         }
         else{
-            table_db += disp_db(hits[i], no_db);
+            table_db += disp_db(hits[i], keyword, no_db);
             no_db += 1;
         }
     }
-    table_txt += "</table>";
-    table_db += "</table>";
+
+    // show nothing if no result
+    if(no_txt === 0){
+        table_txt = '';
+    }
+    else{
+        table_txt += "</table>";
+    }
+    if(no_db === 0){
+        table_db = '';
+    }
+    else{
+        table_db += "</table>";
+    }
+
+
 
     var detail_table = {};
     detail_table['db'] = table_db;
