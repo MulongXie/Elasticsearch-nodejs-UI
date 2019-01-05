@@ -106,8 +106,8 @@ function disp_db(hit, keyword, no_db){
 
 function disp_detail(result, keyword){
     var hits = result.hits.hits;
-    var table_txt = "<table id='table_txt' border='0'><tr><th>Number</th><th>Log Folder</th><th>Log Name</th><th>Log Date</th><th>Log Time</th><th>Message</th></tr>";
-    var table_db = "<table id='table_db' border='0'><tr><th>No.</th><th>Database</th><th>Content</th></tr>"
+    var table_txt = "<table border='0'><tr><th>Number</th><th>Log Folder</th><th>Log Name</th><th>Log Date</th><th>Log Time</th><th>Message</th></tr>";
+    var table_db = "<table border='0'><tr><th>No.</th><th>Database</th><th>Content</th></tr>"
     var no_txt = 0;
     var no_db = 0;
 

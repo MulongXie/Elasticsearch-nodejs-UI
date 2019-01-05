@@ -2,6 +2,10 @@
 // *** 1/4/2019 ***
 // split the result of different data source into different pages
 
+// *** s3 v3 ***
+// *** 1/5/2019 ***
+// show all results of database in database format
+
 function disp_overview(result, draw_data){
     var type = result.aggregations.type.buckets;
 
@@ -48,8 +52,14 @@ function disp_overview(result, draw_data){
     if (!exist_txt){
         overview_txt = "<h3>No Result for Given Keyword in Log Folders</h3>"
     }
+    else{
+        overview_txt = "<h3>Overview Result</h3>" + overview_txt;
+    }
     if (!exist_db){
         overview_db = "<h3>No Result for Given Keyword in Database</h3>"
+    }
+    else{
+        overview_db = "<h3>Overview Result</h3>" + overview_db;
     }
     overview['txt'] = overview_txt;
     overview['db'] = overview_db;
@@ -57,7 +67,7 @@ function disp_overview(result, draw_data){
     return overview;
 }
 
-
+// for one row of txt result table
 function disp_txt(hit, keycontent, no_txt){
 
     var log_folder = hit._source.log_folder;
@@ -85,29 +95,35 @@ function disp_txt(hit, keycontent, no_txt){
     return disp_content;
 }
 
-
-function disp_db(hit, keyword, no_db){
-
-    var disp_content = "<tr><td align='center'>" + no_db + "</td>";
-    disp_content += "<td align='center'>" + hit._source.type + "</td>";
-    disp_content += "<td align='center'>";
-    for(var j in hit._source){
-        disp_content += "<b>" + j + ':' + "</b>" + hit._source[j] + "<br>";
+// for one row of database table
+function disp_db(hit, keyword, no_db, tables_db){
+    var type = hit._source.type;
+    // create a new table for this type if no such table exist
+    if (!tables_db[type]){
+        tables_db[type] = "<table><tr><th>Table Name</th>";
+        for(var i in hit._source){
+            tables_db[type] += "<th>" + i + "</th>";
+        }
+        tables_db[type] += "</tr>"
     }
-    disp_content += "</td></tr>";
+
+    tables_db[type] += "<tr><td align='center'>" + type + "</td>";
+    for(var j in hit._source){
+        tables_db[type] += "<td align='center'>" + hit._source[j] +"</td>";
+    }
+    tables_db[type] += "</tr>";
 
     // highlight keywords
     var keyreg = new RegExp(keyword, 'ig');
-    disp_content = disp_content.replace(keyreg, '<mark>' + keyword + '</mark>');
-
-    return disp_content;
+    tables_db[type] = tables_db[type].replace(keyreg, '<mark>' + keyword + '</mark>');
 }
 
 
 function disp_detail(result, keyword){
     var hits = result.hits.hits;
-    var table_txt = "<table id='table_txt' border='0'><tr><th>Number</th><th>Log Folder</th><th>Log Name</th><th>Log Date</th><th>Log Time</th><th>Message</th></tr>";
-    var table_db = "<table id='table_db' border='0'><tr><th>No.</th><th>Database</th><th>Content</th></tr>"
+    var table_txt = "<table border='0'><tr><th>Number</th><th>Log Folder</th><th>Log Name</th><th>Log Date</th><th>Log Time</th><th>Message</th></tr>";
+    var table_db = "";
+    var tables_db = {};
     var no_txt = 0;
     var no_db = 0;
 
@@ -132,7 +148,7 @@ function disp_detail(result, keyword){
             no_txt += 1;
         }
         else{
-            table_db += disp_db(hits[i], keyword, no_db);
+            disp_db(hits[i], keyword, no_db, tables_db);
             no_db += 1;
         }
     }
@@ -142,6 +158,7 @@ function disp_detail(result, keyword){
         table_txt = '';
     }
     else{
+        table_txt = "<h3>Detailed Result</h3>" + table_txt;
         table_txt += "</table>";
         table_txt += "<h3>Download File to Check More Details</h3>"
     }
@@ -149,10 +166,11 @@ function disp_detail(result, keyword){
         table_db = '';
     }
     else{
-        table_db += "</table>";
+        for(var k in tables_db){
+            table_db += tables_db[k] + "</table><br>";
+        }
+        table_db = "<h3>Detailed Result</h3>" + table_db;
     }
-
-
 
     var detail_table = {};
     detail_table['db'] = table_db;

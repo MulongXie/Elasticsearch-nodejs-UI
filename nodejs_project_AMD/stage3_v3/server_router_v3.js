@@ -8,8 +8,8 @@ function router() {
     var express = require('express');
     var bodyParser = require('body-parser');
     var fs = require('fs');
-    var es = require('./server_searchengine_v2');
-    var ui = require('./ui_v2');
+    var es = require('./server_searchengine_v3');
+    var ui = require('./ui_v3');
 
     var app = express();
     var keycontent;  // the input keyword
@@ -23,7 +23,7 @@ function router() {
 
     // *** router start ***
     app.get('/', function (req, res) {
-        res.sendfile(__dirname + '/public/index_v2.html');
+        res.sendfile(__dirname + '/public/index_v3.html');
     });
 
 
