@@ -68,7 +68,7 @@ function queryFunc(keyword, flag, folder=false) {
                 }
             };
 
-        // 2. search in all data
+        // 2. search in all database and files
         case 2:
             return{
                 index: index,
@@ -76,9 +76,12 @@ function queryFunc(keyword, flag, folder=false) {
                 size: results_number,
                 body:{
                     query:{
-                        multi_match:{
-                            "query": keyword,
-                            "fields": ["db_message", "message"]
+                        bool:{
+                            should:[
+                                //{term:{db_message:{"value":keyword}}},  // search exact string in database
+                                {match:{"db_message":keyword}},
+                                {match:{"message":keyword}}  // match the similar string in files
+                            ]
                         }
                     },
                     aggs: {
