@@ -115,7 +115,6 @@ function disp_db(hit, keyword, no_db, tables_db){
     }
     body += "</tr>";
 
-    console.log(body)
     // highlight keywords
     var keyreg = new RegExp("(?<=([^a-zA-Z0-9\<\/]|^))" + keyword + "(?=([^a-zA-Z0-9\>\/]|$))", "ig");
     body = body.replace(keyreg, '<mark>' + keyword + '</mark>');
