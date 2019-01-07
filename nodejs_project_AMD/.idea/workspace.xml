@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8ab92d-df41-40e5-be59-bd07c9a1cdb3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/stage1_v3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stage1_v3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage1_v3/output/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/stage1_v3/output/search.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage2_v4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stage2_v4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage3_v3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stage3_v3/output/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v3/output/search.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage3_v3/public/index_v3.html" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v3/public/index_v3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stage3_v3/ui_v3.js" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v3/ui_v3.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_v3/ui_v3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="333">
+              <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -33,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="179" column="5" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
+            <state relative-caret-position="238">
+              <caret line="110" column="48" lean-forward="true" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="48" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#882#2385#0" />
@@ -48,15 +45,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_v3/server_router_v3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="112">
+              <caret line="50" column="63" lean-forward="true" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#689#755#0" />
-                <element signature="e#807#2693#0" />
                 <element signature="e#2743#3058#0" />
                 <element signature="e#3121#3170#0" />
               </folding>
@@ -67,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_v3/public/index_v3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="-1159">
+              <caret line="188" column="55" lean-forward="true" selection-start-line="188" selection-start-column="55" selection-end-line="188" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -103,10 +99,10 @@
         <option value="$PROJECT_DIR$/stage3_v2/server_router_v2.js" />
         <option value="$PROJECT_DIR$/stage3_v2/public/index_v2.html" />
         <option value="$PROJECT_DIR$/stage3_v2/ui_v2.js" />
+        <option value="$PROJECT_DIR$/stage3_v3/public/index_v3.html" />
         <option value="$PROJECT_DIR$/stage3_v3/server_router_v3.js" />
         <option value="$PROJECT_DIR$/stage3_v3/ui_v3.js" />
         <option value="$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js" />
-        <option value="$PROJECT_DIR$/stage3_v3/public/index_v3.html" />
       </list>
     </option>
   </component>
@@ -216,12 +212,12 @@
       <workItem from="1546657685408" duration="3315000" />
       <workItem from="1546668970654" duration="1216000" />
       <workItem from="1546746652711" duration="2100000" />
-      <workItem from="1546828344215" duration="8068000" />
+      <workItem from="1546828344215" duration="9814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53454000" />
+    <option name="totallyTimeSpent" value="55200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="793" y="0" width="814" height="867" extended-state="0" />
@@ -273,46 +269,45 @@
     <entry file="file://$PROJECT_DIR$/stage3_v2/server_router_v3.js" />
     <entry file="file://$PROJECT_DIR$/stage3_v2/server_searchengine_v3.js" />
     <entry file="file://$PROJECT_DIR$/stage3_v2/ui_v3.js" />
-    <entry file="file://$PROJECT_DIR$/stage3_v3/ui_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stage3_v3/public/index_v3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="179" column="5" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#882#2385#0" />
-            <element signature="e#2442#3942#0" />
-            <element signature="e#4021#5077#0" />
-          </folding>
+        <state relative-caret-position="-1159">
+          <caret line="188" column="55" lean-forward="true" selection-start-line="188" selection-start-column="55" selection-end-line="188" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stage3_v3/server_router_v3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="112">
+          <caret line="50" column="63" lean-forward="true" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#689#755#0" />
-            <element signature="e#807#2693#0" />
             <element signature="e#2743#3058#0" />
             <element signature="e#3121#3170#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage3_v3/ui_v3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="110" column="48" lean-forward="true" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#882#2385#0" />
+            <element signature="e#2442#3942#0" />
+            <element signature="e#4021#5077#0" />
           </folding>
         </state>
       </provider>

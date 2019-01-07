@@ -7,6 +7,7 @@
 // show all results of database in database format
 
 function disp_overview(result, draw_data){
+    var time = result.took;
     var type = result.aggregations.type.buckets;
 
     var overview = {};
@@ -53,13 +54,13 @@ function disp_overview(result, draw_data){
         overview_txt = "<h3>No Result for Given Keyword in Log Folders</h3>"
     }
     else{
-        overview_txt = "<h3>Overview Result</h3>" + overview_txt;
+        overview_txt = "<p>Time Taken: " + (time * 0.001).toString().substring(0, 5) + "s</p>" + "<h3>Overview Result</h3>" + overview_txt;
     }
     if (!exist_db){
         overview_db = "<h3>No Result for Given Keyword in Database</h3>"
     }
     else{
-        overview_db = "<h3>Overview Result</h3>" + overview_db;
+        overview_db = "<p>Time Taken: " + (time * 0.001).toString().substring(0, 5) + "s</p>" + "<h3>Overview Result</h3>" + overview_db;
     }
     overview['txt'] = overview_txt;
     overview['db'] = overview_db;
