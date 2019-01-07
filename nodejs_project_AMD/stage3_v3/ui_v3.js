@@ -58,14 +58,14 @@ function disp_overview(result, draw_data){
         overview_txt = "<h3>No Result for Given Keyword in Log Folders</h3>"
     }
     else{
-        overview_txt = "<p>Time Taken: " + (time * 0.001).toString().substring(0, 5) + "s  About " + sum + " Results</p>"
+        overview_txt = "<p>Time Taken: " + (time * 0.001).toString().substring(0, 5) + "s.  About " + sum + " Results</p>"
             + "<h3>Overview Result</h3>" + overview_txt;
     }
     if (!exist_db){
         overview_db = "<h3>No Result for Given Keyword in Database</h3>"
     }
     else{
-        overview_db = "<p>Time Taken: " + (time * 0.001).toString().substring(0, 5) + "s  About " + sum + " Results</p>"
+        overview_db = "<p>Time Taken: " + (time * 0.001).toString().substring(0, 5) + "s.  About " + sum + " Results</p>"
             + "<h3>Overview Result</h3>" + overview_db;
     }
     overview['txt'] = overview_txt;
