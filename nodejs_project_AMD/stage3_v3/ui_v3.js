@@ -17,6 +17,8 @@ function disp_overview(result, draw_data){
     var exist_txt = false;
     var exist_db = false;
 
+    var sum = 0;
+
     // for database data, type is the name of table
     // for all text files, their types are 'txt'
     for (var i = 0; i < type.length; i++){
@@ -32,6 +34,7 @@ function disp_overview(result, draw_data){
                 overview_txt += "<td align='center'>" + count_log[0].doc_count + "</td>";
                 overview_txt += "<td align='center' rowspan='" + count_log.length + "'>" + count_folder[j].doc_count + "</td></tr>";
                 draw_data [count_log[0].key] = count_log[0].doc_count; // restore for drawing
+                sum += count_folder[j].doc_count; // count data
                 for (var k = 1; k < count_log.length; k++){
                     overview_txt += "<td align='center'><a href='http://localhost:8888/download?file=" + count_folder[j].key + "/" + count_log[k].key + "'>" + count_log[k].key + "</td>";
                     overview_txt += "<td align='center'>" + count_log[k].doc_count + "</td></tr>";
@@ -45,6 +48,7 @@ function disp_overview(result, draw_data){
         else{
             overview_db += "<tr><td align='center'><b>" + type[i].key + "</b></td><td align='center'>" + type[i].doc_count + "</td>";
             draw_data ["DB_" + type[i].key] = type[i].doc_count;
+            sum += type[i].doc_count;
             exist_db = true;
         }
     }
@@ -54,13 +58,15 @@ function disp_overview(result, draw_data){
         overview_txt = "<h3>No Result for Given Keyword in Log Folders</h3>"
     }
     else{
-        overview_txt = "<p>Time Taken: " + (time * 0.001).toString().substring(0, 5) + "s</p>" + "<h3>Overview Result</h3>" + overview_txt;
+        overview_txt = "<p>Time Taken: " + (time * 0.001).toString().substring(0, 5) + "s  About " + sum + " Results</p>"
+            + "<h3>Overview Result</h3>" + overview_txt;
     }
     if (!exist_db){
         overview_db = "<h3>No Result for Given Keyword in Database</h3>"
     }
     else{
-        overview_db = "<p>Time Taken: " + (time * 0.001).toString().substring(0, 5) + "s</p>" + "<h3>Overview Result</h3>" + overview_db;
+        overview_db = "<p>Time Taken: " + (time * 0.001).toString().substring(0, 5) + "s  About " + sum + " Results</p>"
+            + "<h3>Overview Result</h3>" + overview_db;
     }
     overview['txt'] = overview_txt;
     overview['db'] = overview_db;
