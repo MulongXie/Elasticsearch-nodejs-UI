@@ -4,7 +4,6 @@
     <list default="true" id="8f8ab92d-df41-40e5-be59-bd07c9a1cdb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stage3_v3/output/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v3/output/search.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stage3_v3/ui_v3.js" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v3/ui_v3.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stage3_v3/ui_v3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+            <state relative-caret-position="237">
+              <caret line="115" column="20" lean-forward="true" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -30,14 +29,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="110" column="48" lean-forward="true" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="48" />
+            <state relative-caret-position="306">
+              <caret line="152" column="36" lean-forward="true" selection-start-line="152" selection-start-column="36" selection-end-line="152" selection-end-column="36" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#882#2385#0" />
                 <element signature="e#2442#3942#0" />
                 <element signature="e#4021#5077#0" />
               </folding>
@@ -48,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_v3/server_router_v3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="50" column="63" lean-forward="true" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+            <state relative-caret-position="187">
+              <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#689#755#0" />
@@ -63,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_v3/public/index_v3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1159">
-              <caret line="188" column="55" lean-forward="true" selection-start-line="188" selection-start-column="55" selection-end-line="188" selection-end-column="55" />
+            <state relative-caret-position="710">
+              <caret line="216" column="19" lean-forward="true" selection-start-line="216" selection-start-column="19" selection-end-line="216" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -101,8 +99,8 @@
         <option value="$PROJECT_DIR$/stage3_v2/ui_v2.js" />
         <option value="$PROJECT_DIR$/stage3_v3/public/index_v3.html" />
         <option value="$PROJECT_DIR$/stage3_v3/server_router_v3.js" />
-        <option value="$PROJECT_DIR$/stage3_v3/ui_v3.js" />
         <option value="$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js" />
+        <option value="$PROJECT_DIR$/stage3_v3/ui_v3.js" />
       </list>
     </option>
   </component>
@@ -125,6 +123,11 @@
             <path>
               <item name="nodejs_project_AMD" type="b2602c69:ProjectViewProjectNode" />
               <item name="nodejs_project_AMD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nodejs_project_AMD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nodejs_project_AMD" type="462c0819:PsiDirectoryNode" />
+              <item name="stage2_v4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nodejs_project_AMD" type="b2602c69:ProjectViewProjectNode" />
@@ -173,26 +176,26 @@
     <configuration name="server_router_v3.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="server_router_v3.js" working-dir="$PROJECT_DIR$/stage3_v3">
       <method v="2" />
     </configuration>
-    <configuration name="server_router_v4.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/stage2_v4/server_router_v4.js" working-dir="$PROJECT_DIR$">
+    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/stage3_v1/test.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/stage3_v1/test.js" working-dir="$PROJECT_DIR$">
+    <configuration name="ui_v3.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/stage3_v3/ui_v3.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Node.js.server_router_v1.js" />
       <item itemvalue="Node.js.server_router_v2.js" />
-      <item itemvalue="Node.js.server_router_v4.js" />
       <item itemvalue="Node.js.test.js" />
       <item itemvalue="Node.js.server_router_v3.js" />
+      <item itemvalue="Node.js.ui_v3.js" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.server_router_v3.js" />
+        <item itemvalue="Node.js.ui_v3.js" />
         <item itemvalue="Node.js.server_router_v2.js" />
         <item itemvalue="Node.js.server_router_v1.js" />
         <item itemvalue="Node.js.test.js" />
-        <item itemvalue="Node.js.server_router_v4.js" />
       </list>
     </recent_temporary>
   </component>
@@ -212,23 +215,23 @@
       <workItem from="1546657685408" duration="3315000" />
       <workItem from="1546668970654" duration="1216000" />
       <workItem from="1546746652711" duration="2100000" />
-      <workItem from="1546828344215" duration="9814000" />
+      <workItem from="1546828344215" duration="15622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55200000" />
+    <option name="totallyTimeSpent" value="61008000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="793" y="0" width="814" height="867" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.33676094" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26804122" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291592" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25141242" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3418079" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -269,17 +272,29 @@
     <entry file="file://$PROJECT_DIR$/stage3_v2/server_router_v3.js" />
     <entry file="file://$PROJECT_DIR$/stage3_v2/server_searchengine_v3.js" />
     <entry file="file://$PROJECT_DIR$/stage3_v2/ui_v3.js" />
+    <entry file="file://$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="152" column="36" lean-forward="true" selection-start-line="152" selection-start-column="36" selection-end-line="152" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#2442#3942#0" />
+            <element signature="e#4021#5077#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stage3_v3/public/index_v3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1159">
-          <caret line="188" column="55" lean-forward="true" selection-start-line="188" selection-start-column="55" selection-end-line="188" selection-end-column="55" />
+        <state relative-caret-position="710">
+          <caret line="216" column="19" lean-forward="true" selection-start-line="216" selection-start-column="19" selection-end-line="216" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stage3_v3/server_router_v3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="50" column="63" lean-forward="true" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+        <state relative-caret-position="187">
+          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#689#755#0" />
@@ -289,25 +304,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v3/ui_v3.js">
+    <entry file="file://$PROJECT_DIR$/stage2_v4/ui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-714" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js">
+    <entry file="file://$PROJECT_DIR$/stage3_v3/ui_v3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="110" column="48" lean-forward="true" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="48" />
+        <state relative-caret-position="237">
+          <caret line="115" column="20" lean-forward="true" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#882#2385#0" />
-            <element signature="e#2442#3942#0" />
-            <element signature="e#4021#5077#0" />
           </folding>
         </state>
       </provider>
