@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8ab92d-df41-40e5-be59-bd07c9a1cdb3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stage1_v3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stage1_v3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stage1_v3/output/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/stage1_v3/output/search.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stage2_v4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stage2_v4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stage3_v3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stage3_v3/output/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v3/output/search.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stage3_v3/public/index_v3.html" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v3/public/index_v3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js" beforeDir="false" afterPath="$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ui_v3.js" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_v3/ui_v3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1021">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="622">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -30,35 +33,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server_searchengine_v3.js" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
-              <caret line="80" column="59" lean-forward="true" selection-start-line="80" selection-start-column="59" selection-end-line="80" selection-end-column="59" />
+            <state relative-caret-position="629">
+              <caret line="179" column="5" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#882#2385#0" />
+                <element signature="e#2442#3942#0" />
+                <element signature="e#4021#5077#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server_router_v3.js" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stage3_v3/server_router_v3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+            <state relative-caret-position="221">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#689#755#0" />
+                <element signature="e#807#2693#0" />
+                <element signature="e#2743#3058#0" />
+                <element signature="e#3121#3170#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index_v3.html" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_v3/public/index_v3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+            <state relative-caret-position="272">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -95,243 +105,14 @@
         <option value="$PROJECT_DIR$/stage3_v2/ui_v2.js" />
         <option value="$PROJECT_DIR$/stage3_v3/server_router_v3.js" />
         <option value="$PROJECT_DIR$/stage3_v3/ui_v3.js" />
-        <option value="$PROJECT_DIR$/stage3_v3/public/index_v3.html" />
         <option value="$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js" />
+        <option value="$PROJECT_DIR$/stage3_v3/public/index_v3.html" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/accepts/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/agentkeepalive/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/ansi-styles/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/array-flatten/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/body-parser/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/body-parser/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/body-parser/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/body-parser/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/bytes/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/chalk/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/content-disposition/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/content-type/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/cookie-signature/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/cookie/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/depd/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/destroy/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/ee-first/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/elasticsearch/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/encodeurl/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/escape-html/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/escape-string-regexp/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/etag/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/express/node_modules/body-parser/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/express/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/express/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/express/node_modules/proxy-addr/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/express/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/express/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/express/node_modules/safe-buffer/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/express/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/finalhandler/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/forwarded/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/fresh/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/has-ansi/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/http-errors/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/humanize-ms/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/inherits/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/lodash/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/media-typer/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/merge-descriptors/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/methods/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/mime-db/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/mime-types/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/mime/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/ms/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/negotiator/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/on-finished/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/parseurl/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/path-to-regexp/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/proxy-addr/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/proxy-addr/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/range-parser/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/raw-body/node_modules/depd/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/raw-body/node_modules/http-errors/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/raw-body/node_modules/setprototypeof/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/safe-buffer/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/safer-buffer/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/send/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/serve-static/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/setprototypeof/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/statuses/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/supports-color/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/type-is/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/unpipe/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/utils-merge/package.json" />
-      <path value="$PROJECT_DIR$/stage1_v3/node_modules/vary/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/accepts/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/agentkeepalive/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/ansi-styles/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/array-flatten/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/body-parser/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/body-parser/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/body-parser/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/body-parser/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/bytes/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/chalk/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/content-disposition/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/content-type/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/cookie-signature/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/cookie/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/depd/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/destroy/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/ee-first/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/elasticsearch/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/encodeurl/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/escape-html/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/escape-string-regexp/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/etag/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/express/node_modules/body-parser/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/express/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/express/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/express/node_modules/proxy-addr/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/express/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/express/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/express/node_modules/safe-buffer/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/express/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/finalhandler/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/forwarded/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/fresh/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/has-ansi/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/http-errors/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/humanize-ms/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/inherits/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/lodash/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/media-typer/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/merge-descriptors/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/methods/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/mime-db/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/mime-types/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/mime/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/ms/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/negotiator/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/on-finished/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/parseurl/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/path-to-regexp/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/proxy-addr/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/proxy-addr/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/range-parser/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/raw-body/node_modules/depd/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/raw-body/node_modules/http-errors/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/raw-body/node_modules/setprototypeof/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/safe-buffer/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/safer-buffer/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/send/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/serve-static/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/setprototypeof/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/statuses/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/supports-color/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/type-is/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/unpipe/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/utils-merge/package.json" />
-      <path value="$PROJECT_DIR$/stage2_v4/node_modules/vary/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/accepts/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/agentkeepalive/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/ansi-styles/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/array-flatten/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/body-parser/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/body-parser/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/body-parser/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/body-parser/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/bytes/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/chalk/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/content-disposition/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/content-type/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/cookie-signature/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/cookie/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/depd/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/destroy/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/ee-first/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/elasticsearch/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/encodeurl/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/escape-html/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/escape-string-regexp/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/etag/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/express/node_modules/body-parser/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/express/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/express/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/express/node_modules/proxy-addr/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/express/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/express/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/express/node_modules/safe-buffer/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/express/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/finalhandler/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/forwarded/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/fresh/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/has-ansi/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/http-errors/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/humanize-ms/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/inherits/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/lodash/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/media-typer/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/merge-descriptors/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/methods/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/mime-db/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/mime-types/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/mime/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/ms/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/negotiator/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/on-finished/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/parseurl/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/path-to-regexp/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/proxy-addr/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/proxy-addr/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/range-parser/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/raw-body/node_modules/depd/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/raw-body/node_modules/http-errors/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/raw-body/node_modules/setprototypeof/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/safe-buffer/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/safer-buffer/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/send/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/serve-static/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/setprototypeof/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/statuses/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/supports-color/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/type-is/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/unpipe/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/utils-merge/package.json" />
-      <path value="$PROJECT_DIR$/stage3_v3/node_modules/vary/package.json" />
-    </packageJsonPaths>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="792" />
-    <option name="width" value="816" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="793" />
+    <option name="width" value="814" />
     <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -342,7 +123,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,15 +135,22 @@
               <item name="nodejs_project_AMD" type="462c0819:PsiDirectoryNode" />
               <item name="stage3_v3" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="nodejs_project_AMD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nodejs_project_AMD" type="462c0819:PsiDirectoryNode" />
+              <item name="stage3_v3" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/stage3_v3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../code/nodejs/nodejs_trail" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -381,11 +168,21 @@
     </option>
   </component>
   <component name="RunManager" selected="Node.js.server_router_v3.js">
-    <configuration name="server_router_v1.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/stage3_v1/server_router_v1.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="server_router_v2.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/stage3_v2/server_router_v2.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="server_router_v3.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="server_router_v3.js" working-dir="$PROJECT_DIR$/stage3_v3" />
-    <configuration name="server_router_v4.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/stage2_v4/server_router_v4.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/stage3_v1/test.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="server_router_v1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/stage3_v1/server_router_v1.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="server_router_v2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/stage3_v2/server_router_v2.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="server_router_v3.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="server_router_v3.js" working-dir="$PROJECT_DIR$/stage3_v3">
+      <method v="2" />
+    </configuration>
+    <configuration name="server_router_v4.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/stage2_v4/server_router_v4.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/stage3_v1/test.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Node.js.server_router_v1.js" />
       <item itemvalue="Node.js.server_router_v2.js" />
@@ -419,124 +216,40 @@
       <workItem from="1546657685408" duration="3315000" />
       <workItem from="1546668970654" duration="1216000" />
       <workItem from="1546746652711" duration="2100000" />
+      <workItem from="1546828344215" duration="8068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45386000" />
+    <option name="totallyTimeSpent" value="53454000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="793" y="0" width="814" height="867" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16613673" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.33676094" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291592" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25141242" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24865831" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3291592" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stage3_v3/ui_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2873">
-          <caret line="171" column="24" selection-start-line="171" selection-start-column="24" selection-end-line="171" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v3/server_router_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v3/public/index_v3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v3/ui_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2873">
-          <caret line="171" column="24" selection-start-line="171" selection-start-column="24" selection-end-line="171" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v3/server_router_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="56" column="33" lean-forward="true" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v3/public/index_v3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="108" column="35" lean-forward="true" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v2/public/index_v3.html" />
-    <entry file="file://$PROJECT_DIR$/stage3_v2/server_router_v3.js" />
-    <entry file="file://$PROJECT_DIR$/stage3_v2/server_searchengine_v3.js" />
-    <entry file="file://$PROJECT_DIR$/stage3_v2/ui_v3.js" />
-    <entry file="file://$PROJECT_DIR$/stage3_v2/public/index_v2.html" />
-    <entry file="file://$PROJECT_DIR$/stage3_v2/ui_v2.js" />
-    <entry file="file://$PROJECT_DIR$/stage3_v2/server_router_v2.js" />
-    <entry file="file://$PROJECT_DIR$/stage3_v2/server_searchengine_v2.js" />
     <entry file="file://$PROJECT_DIR$/stage2_v4/server_router_v4.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -560,10 +273,10 @@
     <entry file="file://$PROJECT_DIR$/stage3_v2/server_router_v3.js" />
     <entry file="file://$PROJECT_DIR$/stage3_v2/server_searchengine_v3.js" />
     <entry file="file://$PROJECT_DIR$/stage3_v2/ui_v3.js" />
-    <entry file="file://$PROJECT_DIR$/stage3_v3/server_router_v3.js">
+    <entry file="file://$PROJECT_DIR$/stage3_v3/ui_v3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+        <state relative-caret-position="622">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -572,27 +285,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stage3_v3/public/index_v3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stage3_v3/server_searchengine_v3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="80" column="59" lean-forward="true" selection-start-line="80" selection-start-column="59" selection-end-line="80" selection-end-column="59" />
+        <state relative-caret-position="629">
+          <caret line="179" column="5" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="e#882#2385#0" />
+            <element signature="e#2442#3942#0" />
+            <element signature="e#4021#5077#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_v3/ui_v3.js">
+    <entry file="file://$PROJECT_DIR$/stage3_v3/server_router_v3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1021">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="221">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="e#689#755#0" />
+            <element signature="e#807#2693#0" />
+            <element signature="e#2743#3058#0" />
+            <element signature="e#3121#3170#0" />
           </folding>
         </state>
       </provider>

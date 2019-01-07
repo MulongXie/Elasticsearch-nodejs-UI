@@ -34,35 +34,31 @@
             height: 30px;
             font-family: "Century Gothic";
         }
-
-        #nav_data_source{
-            margin-top: 0;
-            margin-right: 0;
-            padding-right: 0;
-            float: left;
-            width: 8%;
-
-            display: none;
-        }
-
-        #rt_shell{
-            width: 96%;
+        #nav_bar button.active{
+            background-color: #00B7FF;
         }
 
         #rt{
             max-height: 86%;
-            max-width: 92%;
+            max-width: 80%;
             padding: 10px;
             overflow-y: auto;
             overflow-x: auto;
-            margin: 0;
+            margin: 0 7% 0 7%;
             display: none;
             background-color: #00B7FF;
         }
 
+        #data_source{
+            border: 0;
+            float: left;
+            width: 8%;
+            height: 200px;
+            margin-left: auto;
+        }
         ul{
             padding-left: 0;
-            margin-top: 0;
+            padding-top: 0;
         }
         li{
             padding-top: 0;
@@ -74,9 +70,6 @@
 
         button{
             font-family: "Yu Gothic UI";
-        }
-        button.active{
-              background-color: #00B7FF;
         }
         button:hover{
             background-color: #00B7FF;
@@ -105,9 +98,6 @@
             overflow: auto;
             width: auto;
         }
-        h3{
-            background-color: aqua;
-        }
 
     </style>
 </head>
@@ -134,7 +124,7 @@
             <option label="operator" value="operator">
             <option label="All Folders and Database" value="All">
         </datalist>
-        <button id="sbmt_folder" class="sbmt_button" onclick="show()">Select</button>
+        <button id="sbmt_folder" class="sbmt_button" onclick="show()">Config</button>
     </div>
 
     <div align="center">
@@ -149,30 +139,30 @@
 
 <div align="center">
     <div id="nav_bar">
-        <button id="butt_table" class="active">Table</button>
-        <button id="butt_plot">Diagram</button>
+        <button id="show_table" class="active">Table</button>
+        <button id="show_plot">Diagram</button>
     </div>
 </div>
 
-<div id="rt_container" align="center">
-    <div id="rt_shell">
-        <div id="nav_data_source">
-            <ul style="list-style-type: none">
-                <li><button id="butt_text" class="active">Text File</button></li>
-                <li><button id="butt_db">Database</button></li>
-            </ul>
-        </div>
-
-        <div id="rt" align="center">
-            <div id="disp_table" style="display: block">
-                <div id="table_txt" style="display: block"></div>
-                <div id="table_db" style="display: none;"></div>
-            </div>
-            <div id="disp_plot" style="display: none" align="center"></div>
-            <div id="search_failed"></div>
-        </div>
+<div id="rt_container">
+    <div id="data_source">
+        <ul style="list-style-type: none">
+            <li><button id="show_text">Text File</button></li>
+            <li><button id="show_db">Database</button></li>
+            <li><button id="show_pdf">PDF</button></li>
+        </ul>
     </div>
+
+    <div id="rt" class="result_table" align="center">
+        <div id="disp_table" style="display: block"></div>
+        <div id="disp_plot" style="display: none"></div>
+        <div id="search_failed"></div>
+    </div>
+
 </div>
+
+
+
 
 
 <script type="application/javascript">
@@ -187,23 +177,18 @@
             success: function (data) {
                 // parse the string data into Json
                 var data_json = eval('(' + data + ')');
-                // display result
                 document.getElementById('folder_name').innerText = 'Current Folder: All logs and database on server';
-                document.getElementById('table_txt').innerHTML = data_json['disp']['txt'];
-                document.getElementById('table_db').innerHTML = data_json['disp']['db'];
+                document.getElementById('disp_table').innerHTML = data_json['disp'];
 
-                // change display area
                 document.getElementById('rt').style.display = 'block';
                 document.getElementById('rt').style.backgroundColor = '#00B7FF';
                 document.getElementById('nav_bar').style.display = 'block';
-                document.getElementById('nav_data_source').style.display = 'block';
                 document.getElementById('search_failed').style.display = 'none';
                 document.getElementById('disp_table').style.display = 'block';
                 document.getElementById('disp_plot').style.display = 'none';
 
-                // change button status
-                document.getElementById('butt_table').className = 'active';
-                document.getElementById('butt_plot').className = '';
+                document.getElementById('show_table').className = 'active';
+                document.getElementById('show_plot').className = '';
 
                 plot(data_json['draw_data']);
             }
@@ -224,23 +209,19 @@
                 var data_json = eval('(' + data + ')');
 
                 if (data_json['status'] === 1){
-                    // display result
+
                     var folder = document.getElementById('folder').value;
                     document.getElementById('folder_name').innerText = 'Current Folder: ' + folder;
-                    document.getElementById('table_txt').innerHTML = data_json['disp']['txt'];
-                    document.getElementById('table_db').innerHTML = data_json['disp']['db'];
+                    document.getElementById('disp_table').innerHTML = data_json['disp'];
 
-                    // change display area
                     document.getElementById('rt').style.backgroundColor = '#00B7FF';
                     document.getElementById('nav_bar').style.display = 'block';
-                    document.getElementById('nav_data_source').style.display = 'block';
                     document.getElementById('search_failed').style.display = 'none';
                     document.getElementById('disp_table').style.display = 'block';
                     document.getElementById('disp_plot').style.display = 'none';
 
-                    // change button status
-                    document.getElementById('butt_table').className = 'active';
-                    document.getElementById('butt_plot').className = '';
+                    document.getElementById('show_table').className = 'active';
+                    document.getElementById('show_plot').className = '';
 
                     plot(data_json['draw_data']);
                 }
@@ -250,7 +231,6 @@
 
                     document.getElementById('rt').style.backgroundColor = 'transparent';
                     document.getElementById('nav_bar').style.display = 'none';
-                    document.getElementById('nav_data_source').style.display = 'none';
                     document.getElementById('search_failed').style.display = 'block';
                     document.getElementById('disp_table').style.display = 'none';
                     document.getElementById('disp_plot').style.display = 'none';
@@ -297,10 +277,10 @@
             y.push(data[i]);
         }
 
-        // line, bar, scatter diagram
         var plot_data = [{
-            x: x, y: y, type: 'bar' // 'line','bar','scatter'
+            x: x, y: y, type:'bar'
         }];
+
         var layout = {
             title: "Results in Each Log",
             xaxis:{
@@ -315,13 +295,6 @@
             }
         };
 
-        // pie diagram
-        // var plot_data = [{
-        //     value: y, labels: x, type: 'pie'
-        // }];
-        // var layout = {height: 400, width: 500};
-
-
         Plotly.newPlot(div, plot_data, layout, {responsive:false});
     }
 
@@ -329,28 +302,20 @@
         // top navigator
         var table = document.getElementById('disp_table');
         var plot = document.getElementById('disp_plot');
-        var butt_tab = document.getElementById('butt_table');
-        var butt_plot = document.getElementById('butt_plot');
+        var butt_tab = document.getElementById('show_table');
+        var butt_plot = document.getElementById('show_plot');
 
         butt_tab.onclick = function () {
-            // display area
             table.style.display = 'block';
             plot.style.display = 'none';
-            document.getElementById('nav_data_source').style.display = 'block';
-
-            // change button status
             butt_plot.className = '';
             this.className = 'active';
 
             document.getElementById('rt').style.backgroundColor = '#00BBFF';
         };
         butt_plot.onclick = function () {
-            // display area
             table.style.display = 'none';
             plot.style.display = 'block';
-            document.getElementById('nav_data_source').style.display = 'none';
-
-            // change button status
             butt_tab.className = '';
             this.className = 'active';
 
@@ -360,19 +325,10 @@
         // left side navigator
         var table_text = document.getElementById('table_txt');
         var table_db = document.getElementById('table_db');
-        var butt_text = document.getElementById('butt_text');
-        var butt_db = document.getElementById('butt_db');
+        var butt_text = document.getElementById('show_text');
+        var butt_db = document.getElementById('show_db');
         butt_text.onclick = function () {
-            table_text.style.display = 'block';
-            table_db.style.display = 'none';
-            butt_db.className = '';
-            this.className = 'active';
-        };
-        butt_db.onclick = function () {
             table_text.style.display = 'none';
-            table_db.style.display = 'block';
-            butt_text.className = '';
-            this.className = 'active';
         }
     }
 </script>

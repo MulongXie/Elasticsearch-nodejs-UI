@@ -105,9 +105,6 @@
             overflow: auto;
             width: auto;
         }
-        h3{
-            background-color: aqua;
-        }
 
     </style>
 </head>
@@ -134,7 +131,7 @@
             <option label="operator" value="operator">
             <option label="All Folders and Database" value="All">
         </datalist>
-        <button id="sbmt_folder" class="sbmt_button" onclick="show()">Select</button>
+        <button id="sbmt_folder" class="sbmt_button" onclick="show()">Config</button>
     </div>
 
     <div align="center">
@@ -297,10 +294,10 @@
             y.push(data[i]);
         }
 
-        // line, bar, scatter diagram
         var plot_data = [{
-            x: x, y: y, type: 'bar' // 'line','bar','scatter'
+            x: x, y: y, type:'bar'
         }];
+
         var layout = {
             title: "Results in Each Log",
             xaxis:{
@@ -314,13 +311,6 @@
                 zeroline: false
             }
         };
-
-        // pie diagram
-        // var plot_data = [{
-        //     value: y, labels: x, type: 'pie'
-        // }];
-        // var layout = {height: 400, width: 500};
-
 
         Plotly.newPlot(div, plot_data, layout, {responsive:false});
     }
