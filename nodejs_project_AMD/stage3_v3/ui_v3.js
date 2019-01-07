@@ -54,18 +54,26 @@ function disp_overview(result, draw_data){
     }
     overview_db += "</table><br>";
 
+    // split the sum by ','
+    sum = sum.toString();
+    var o = sum.length - 1;
+    while (o >= 3){
+        sum = sum.slice(0, o - 2) + ',' + sum.slice(o - 2);
+        o -= 3;
+    }
+
     if (!exist_txt){
         overview_txt = "<h3>No Result for Given Keyword in Log Folders</h3>"
     }
     else{
-        overview_txt = "<p>Time Taken: " + (time * 0.001).toString().substring(0, 5) + "s.  About " + sum + " Results</p>"
+        overview_txt = "<p>About " + sum + " Results. Time Taken: " + (time * 0.001).toString().substring(0, 5) + "second.</p>"
             + "<h3>Overview Result</h3>" + overview_txt;
     }
     if (!exist_db){
         overview_db = "<h3>No Result for Given Keyword in Database</h3>"
     }
     else{
-        overview_db = "<p>Time Taken: " + (time * 0.001).toString().substring(0, 5) + "s.  About " + sum + " Results</p>"
+        overview_db = "<p>About " + sum + " Results. Time Taken: " + (time * 0.001).toString().substring(0, 5) + "second.</p>"
             + "<h3>Overview Result</h3>" + overview_db;
     }
     overview['txt'] = overview_txt;
