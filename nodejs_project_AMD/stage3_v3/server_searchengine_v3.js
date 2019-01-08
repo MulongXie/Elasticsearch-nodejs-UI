@@ -183,7 +183,7 @@ function elasticSearch(search, sendBack)
         query = queryFunc(keyword, 1, folder);
     }
     client.search(query).then(function (res){
-        // get search resultj
+        // get search result
         var total = res.hits.total;
         console.log("total: " + total);
         result = res.hits.hits;
