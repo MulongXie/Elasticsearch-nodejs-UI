@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cfcacd3-4640-4345-a061-903add5ebc09" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stage2_v4/output/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/../stage2_v4/output/search.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/output/search.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui_v3.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui_v3.js" afterDir="false" />
     </list>
@@ -12,7 +9,6 @@
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server_router_v3.js" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server_router_v3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+            <state relative-caret-position="289">
+              <caret line="47" column="36" lean-forward="true" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -32,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server_searchengine_v3.js" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server_searchengine_v3.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2805">
@@ -44,13 +40,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ui_v3.js" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ui_v3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+            <state relative-caret-position="178">
+              <caret line="105" column="87" selection-start-line="105" selection-start-column="87" selection-end-line="105" selection-end-column="87" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,93 +98,9 @@
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/node_modules/accepts/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/agentkeepalive/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ansi-regex/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ansi-styles/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/array-flatten/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/body-parser/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/body-parser/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/bytes/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/chalk/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/content-disposition/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/content-type/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/cookie-signature/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/cookie/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/depd/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/destroy/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ee-first/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/elasticsearch/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/encodeurl/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/escape-html/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/escape-string-regexp/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/etag/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/express/node_modules/body-parser/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/express/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/express/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/express/node_modules/proxy-addr/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/express/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/express/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/express/node_modules/safe-buffer/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/express/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/finalhandler/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/forwarded/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/fresh/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/has-ansi/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/http-errors/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/humanize-ms/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/inherits/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/lodash/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/media-typer/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/merge-descriptors/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/methods/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/mime-db/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/mime-types/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/mime/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/ms/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/negotiator/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/on-finished/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/parseurl/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/path-to-regexp/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/proxy-addr/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/proxy-addr/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/range-parser/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/raw-body/node_modules/depd/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/raw-body/node_modules/http-errors/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/raw-body/node_modules/setprototypeof/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/safe-buffer/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/safer-buffer/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/send/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/serve-static/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/setprototypeof/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/statuses/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/strip-ansi/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/supports-color/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/type-is/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/unpipe/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/utils-merge/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/vary/package.json" />
-    </packageJsonPaths>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="816" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="793" />
+    <option name="width" value="814" />
     <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -197,7 +111,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,6 +122,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -231,11 +145,21 @@
     </option>
   </component>
   <component name="RunManager" selected="Node.js.server_router_v3.js">
-    <configuration name="server_router_v1.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server_router_v1.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="server_router_v2.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server_router_v2.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="server_router_v3.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server_router_v3.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="server_router_v4.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server_router_v4.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="server_router_v1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server_router_v1.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="server_router_v2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server_router_v2.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="server_router_v3.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server_router_v3.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="server_router_v4.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server_router_v4.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Node.js.test.js" />
       <item itemvalue="Node.js.server_router_v3.js" />
@@ -276,92 +200,40 @@
       <workItem from="1546820253158" duration="822000" />
       <workItem from="1546867155953" duration="819000" />
       <workItem from="1546873081981" duration="271000" />
+      <workItem from="1546906245382" duration="2029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25998000" />
+    <option name="totallyTimeSpent" value="28027000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="793" y="0" width="814" height="867" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.041335452" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.253866" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3255814" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server_router_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server_searchengine_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2856">
-          <caret line="168" column="7" selection-start-line="168" selection-start-column="7" selection-end-line="168" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="57" column="25" lean-forward="true" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server_router_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server_searchengine_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2805">
-          <caret line="168" column="7" lean-forward="true" selection-start-line="168" selection-start-column="7" selection-end-line="168" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/router.js" />
     <entry file="file://$PROJECT_DIR$/searchengine.js" />
     <entry file="file://$PROJECT_DIR$/result.js" />
@@ -434,6 +306,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server_router_v3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="47" column="36" lean-forward="true" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server_searchengine_v3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2805">
@@ -446,20 +328,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ui_v3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+        <state relative-caret-position="178">
+          <caret line="105" column="87" selection-start-line="105" selection-start-column="87" selection-end-line="105" selection-end-column="87" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server_router_v3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
