@@ -7,6 +7,7 @@
 // show all results of database in database format
 
 function disp_overview(result, draw_data){
+    var time = result.took;
     var type = result.aggregations.type.buckets;
 
     var overview = {};
@@ -15,6 +16,8 @@ function disp_overview(result, draw_data){
 
     var exist_txt = false;
     var exist_db = false;
+
+    var sum = 0;
 
     // for database data, type is the name of table
     // for all text files, their types are 'txt'
@@ -31,6 +34,7 @@ function disp_overview(result, draw_data){
                 overview_txt += "<td align='center'>" + count_log[0].doc_count + "</td>";
                 overview_txt += "<td align='center' rowspan='" + count_log.length + "'>" + count_folder[j].doc_count + "</td></tr>";
                 draw_data [count_log[0].key] = count_log[0].doc_count; // restore for drawing
+                sum += count_folder[j].doc_count; // count data
                 for (var k = 1; k < count_log.length; k++){
                     overview_txt += "<td align='center'><a href='http://localhost:8888/download?file=" + count_folder[j].key + "/" + count_log[k].key + "'>" + count_log[k].key + "</td>";
                     overview_txt += "<td align='center'>" + count_log[k].doc_count + "</td></tr>";
@@ -44,22 +48,33 @@ function disp_overview(result, draw_data){
         else{
             overview_db += "<tr><td align='center'><b>" + type[i].key + "</b></td><td align='center'>" + type[i].doc_count + "</td>";
             draw_data ["DB_" + type[i].key] = type[i].doc_count;
+            sum += type[i].doc_count;
             exist_db = true;
         }
     }
     overview_db += "</table><br>";
 
+    // split the sum by ','
+    sum = sum.toString();
+    var o = sum.length - 1;
+    while (o >= 3){
+        sum = sum.slice(0, o - 2) + ',' + sum.slice(o - 2);
+        o -= 3;
+    }
+
     if (!exist_txt){
         overview_txt = "<h3>No Result for Given Keyword in Log Folders</h3>"
     }
     else{
-        overview_txt = "<h3>Overview Result</h3>" + overview_txt;
+        overview_txt = "<p>About " + sum + " Results. Time Taken: " + (time * 0.001).toString().substring(0, 5) + " second.</p>"
+            + "<h3>Overview Result</h3>" + overview_txt;
     }
     if (!exist_db){
         overview_db = "<h3>No Result for Given Keyword in Database</h3>"
     }
     else{
-        overview_db = "<h3>Overview Result</h3>" + overview_db;
+        overview_db = "<p>About " + sum + " Results. Time Taken: " + (time * 0.001).toString().substring(0, 5) + " second.</p>"
+            + "<h3>Overview Result</h3>" + overview_db;
     }
     overview['txt'] = overview_txt;
     overview['db'] = overview_db;
@@ -72,18 +87,24 @@ function disp_txt(hit, keycontent, no_txt){
 
     var log_folder = hit._source.log_folder;
     var log_name = hit._source.log_name;
-    var log_content;
+    var log_content = '';
     var disp_content = '';
 
+    // replace '<>' in case of format error on UI
     if (hit._source.log_content){
         log_content =  hit._source.log_content.replace(/\</g,'\[').replace(/\>/g,'\]');
     }
     else{
         log_content =  hit._source.message.replace(/\</g,'\[').replace(/\>/g,'\]');
     }
-    // highlight keywords
-    var keyreg = new RegExp(keycontent, 'ig');
+
+    // highlight keyword when it's a independent string
+    var keyreg = new RegExp("(?<=([^a-zA-Z0-9]|^))" + keycontent.replace(/\[/g, '\\[').replace(/\]/g,'\\]') + "(?=([^a-zA-Z0-9]|$))", "ig"); // avoid parse error
     log_content = log_content.replace(keyreg, '<mark>' + keycontent + '</mark>');
+    // highlight keyword when it's a part of other string
+   // keyreg = new RegExp("(?<!(\<mark\>))" + keycontent + "(?!(\<\/mark\>))", 'ig');
+   // log_content = log_content.replace(keyreg, "<span style='background-color: orangered'>" + keycontent + "</span>");
+
 
     disp_content += "<tr><td align='center'>" + no_txt + "</td>";
     disp_content += "<td align='center'>" + log_folder + "</td>";
@@ -107,15 +128,20 @@ function disp_db(hit, keyword, no_db, tables_db){
         tables_db[type] += "</tr>"
     }
 
-    tables_db[type] += "<tr><td align='center'>" + type + "</td>";
+    var body = "<tr><td align='center'>" + type + "</td>";
     for(var j in hit._source){
-        tables_db[type] += "<td align='center'>" + hit._source[j] +"</td>";
+        body += "<td align='center'>" + hit._source[j] +"</td>";
     }
-    tables_db[type] += "</tr>";
+    body += "</tr>";
 
     // highlight keywords
-    var keyreg = new RegExp(keyword, 'ig');
-    tables_db[type] = tables_db[type].replace(keyreg, '<mark>' + keyword + '</mark>');
+    var keyreg = new RegExp("(?<=([^a-zA-Z0-9\<\/]|^))" + keyword + "(?=([^a-zA-Z0-9\>\/]|$))", "ig");
+    body = body.replace(keyreg, '<mark>' + keyword + '</mark>');
+    // keyreg = new RegExp("(?<!(\<mark\>))" + keyword, 'ig');
+    // body = body.replace(keyreg, "<span style='background-color: orangered'>" + keyword + "</span>")
+
+
+    tables_db[type] += body;
 }
 
 

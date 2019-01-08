@@ -102,8 +102,8 @@ function disp_txt(hit, keycontent, no_txt){
     var keyreg = new RegExp("(?<=([^a-zA-Z0-9]|^))" + keycontent.replace(/\[/g, '\\[').replace(/\]/g,'\\]') + "(?=([^a-zA-Z0-9]|$))", "ig"); // avoid parse error
     log_content = log_content.replace(keyreg, '<mark>' + keycontent + '</mark>');
     // highlight keyword when it's a part of other string
-    keyreg = new RegExp("(?<!(\<mark\>))" + keycontent, 'ig');
-    log_content = log_content.replace(keyreg, "<span style='background-color: orangered'>" + keycontent + "</span>");
+   // keyreg = new RegExp("(?<!(\<mark\>))" + keycontent + "(?!(\<\/mark\>))", 'ig');
+   // log_content = log_content.replace(keyreg, "<span style='background-color: orangered'>" + keycontent + "</span>");
 
 
     disp_content += "<tr><td align='center'>" + no_txt + "</td>";
@@ -137,8 +137,8 @@ function disp_db(hit, keyword, no_db, tables_db){
     // highlight keywords
     var keyreg = new RegExp("(?<=([^a-zA-Z0-9\<\/]|^))" + keyword + "(?=([^a-zA-Z0-9\>\/]|$))", "ig");
     body = body.replace(keyreg, '<mark>' + keyword + '</mark>');
-    keyreg = new RegExp("(?<!(\<mark\>))" + keyword, 'ig');
-    body = body.replace(keyreg, "<span style='background-color: orangered'>" + keyword + "</span>")
+    // keyreg = new RegExp("(?<!(\<mark\>))" + keyword, 'ig');
+    // body = body.replace(keyreg, "<span style='background-color: orangered'>" + keyword + "</span>")
 
 
     tables_db[type] += body;

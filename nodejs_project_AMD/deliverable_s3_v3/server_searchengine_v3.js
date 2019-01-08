@@ -23,7 +23,7 @@
 function queryFunc(keyword, flag, folder=false) {
 
     var index = "logstash-db_log-2019.1.3";  //'logstash-db-2018.12.31','logstash-logs-2018.12.26'，"logstash-db_log-2019.1.3"
-    var results_number = 66;
+    var results_number = 100;
 
     switch (flag) {
         // 1. search in text data only
