@@ -1,0 +1,105 @@
+body{
+    background-image: url("public/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Century Gothic";
+}
+#input{
+    margin:0px auto;
+    width:500px;
+}
+
+#show_all{
+    width: 180px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+#nav_bar{
+    width: 80%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    display: none;
+}
+#nav_bar button{
+    width: 150px;
+    height: 30px;
+    font-family: "Century Gothic";
+}
+
+#nav_data_source{
+    margin-top: 0;
+    margin-right: 0;
+    padding-right: 0;
+    float: left;
+    width: 8%;
+
+    display: none;
+}
+
+#rt_shell{
+    width: 96%;
+}
+
+#rt{
+    max-height: 86%;
+    max-width: 92%;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin: 0;
+    display: none;
+    background-color: #00B7FF;
+}
+
+ul{
+    padding-left: 0;
+    margin-top: 0;
+}
+li{
+    padding-top: 0;
+}
+li button{
+    width: 100%;
+    height: 30px;
+}
+
+button{
+    font-family: "Yu Gothic UI";
+    overflow: hidden;
+}
+button.active{
+    background-color: #00B7FF;
+}
+button:hover{
+    background-color: #00B7FF;
+}
+button:active {
+    background-color: #00B7FF;
+    transform: translateY(2px);
+}
+
+table{
+    color: #000000;
+    background-color: #f3f3f3;
+}
+td{
+    max-width: 1200px;
+    background-color: #00BBFF;
+    font-size: 90%;
+    font-weight: 500;
+    overflow: auto;
+}
+th{
+    background-color: #88b6bc;
+}
+pre{
+    max-height: 400px;
+    overflow: auto;
+    width: auto;
+}
+h3{
+    background-color: aqua;
+}
