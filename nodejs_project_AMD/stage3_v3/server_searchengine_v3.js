@@ -38,7 +38,7 @@ function queryFunc(keyword, flag, folder=false) {
                         bool:{
                             must:[
                                 {match:{"type":"txt"}},
-                                {match:{"message": keyword}},
+                                {match_phrase:{"message": keyword}},
                                 {match:{"log_folder": folder}}
                             ]
                         }
