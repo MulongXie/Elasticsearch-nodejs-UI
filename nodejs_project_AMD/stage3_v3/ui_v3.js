@@ -135,7 +135,7 @@ function disp_db(hit, keyword, no_db, tables_db){
     body += "</tr>";
 
     // highlight keywords
-    var keyreg = new RegExp("(?<=([^a-zA-Z0-9\<\/]|^))" + keyword + "(?=([^a-zA-Z0-9\>\/]|$))", "ig");
+    var keyreg = new RegExp("(?<=([^\<\/]|^))" + keyword + "(?=([^\>\/]|$))", "ig");
     body = body.replace(keyreg, '<mark>' + keyword + '</mark>');
     // keyreg = new RegExp("(?<!(\<mark\>))" + keyword, 'ig');
     // body = body.replace(keyreg, "<span style='background-color: orangered'>" + keyword + "</span>")
