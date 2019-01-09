@@ -79,8 +79,8 @@ function queryFunc(keyword, flag, folder=false) {
                         bool:{
                             should:[
                                 // {term:{message:{"value":keyword}}},  // search exact string in database
-                                {match:{db_message:{"query":keyword, "operator":"and"}}},
-                                {match:{"message":keyword}}  // match the similar string in files
+                                {match:{db_message:{"query":keyword, "operator":"and"}}}, // database
+                                {match_phrase:{"message":keyword}}  // files
                             ]
                         }
                     },
