@@ -1,19 +1,5 @@
-// *** 12/24/2018 ***
-// *** version 1 ***
-// Add aggregation functionality to count the keyword in each logs
-// Find the relative folder for each logs and show in the overview table
-
-// *** 12/26/2018 ***
-// *** version 2 ***
-// Show up to 5 results for each match logs in the display table
-
-// *** 12/27/2018 ***
-// *** version 3 ***
-// Add visualization functionality
-
-// *** 12/27/2018 ***
-// *** version 4 ***
-// Add show all functionality
+// Built by Mulong Xie
+// @TF AMD, Penang, Malaysia
 
 // *** 1/3/2019 ***
 // *** version 5 ***

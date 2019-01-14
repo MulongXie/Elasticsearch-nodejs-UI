@@ -1,6 +1,5 @@
-// *** s3 v2 ***
-// *** 1/4/2019 ***
-// split the result of different data source into different pages
+// Built by Mulong Xie
+// @TF AMD, Penang, Malaysia
 
 // *** s3 v3 ***
 // *** 1/5/2019 ***

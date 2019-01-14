@@ -1,6 +1,5 @@
-// *** s3 v2 ***
-// *** 1/4/2019 ***
-// split the result of different data source into different pages
+// Built by Mulong Xie
+// @TF AMD, Penang, Malaysia
 
 // *** s3 v3 ***
 // *** 1/5/2019 ***
@@ -135,7 +134,7 @@ function disp_db(hit, keyword, no_db, tables_db){
     body += "</tr>";
 
     // highlight keywords
-    var keyreg = new RegExp("(?<=([^a-zA-Z0-9\<\/]|^))" + keyword + "(?=([^a-zA-Z0-9\>\/]|$))", "ig");
+    var keyreg = new RegExp("(?<=([^\<\/]|^))" + keyword + "(?=([^\>\/]|$))", "ig");
     body = body.replace(keyreg, '<mark>' + keyword + '</mark>');
     // keyreg = new RegExp("(?<!(\<mark\>))" + keyword, 'ig');
     // body = body.replace(keyreg, "<span style='background-color: orangered'>" + keyword + "</span>")

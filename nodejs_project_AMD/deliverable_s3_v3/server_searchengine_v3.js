@@ -1,19 +1,5 @@
-// *** 12/24/2018 ***
-// *** version 1 ***
-// Add aggregation functionality to count the keyword in each logs
-// Find the relative folder for each logs and show in the overview table
-
-// *** 12/26/2018 ***
-// *** version 2 ***
-// Show up to 5 results for each match logs in the display table
-
-// *** 12/27/2018 ***
-// *** version 3 ***
-// Add visualization functionality
-
-// *** 12/27/2018 ***
-// *** version 4 ***
-// Add show all functionality
+// Built by Mulong Xie
+// @TF AMD, Penang, Malaysia
 
 // *** 1/3/2019 ***
 // *** version 5 ***
@@ -38,7 +24,7 @@ function queryFunc(keyword, flag, folder=false) {
                         bool:{
                             must:[
                                 {match:{"type":"txt"}},
-                                {match:{"message": keyword}},
+                                {match_phrase:{"message": keyword}},
                                 {match:{"log_folder": folder}}
                             ]
                         }
@@ -78,9 +64,9 @@ function queryFunc(keyword, flag, folder=false) {
                     query:{
                         bool:{
                             should:[
-                                //{term:{db_message:{"value":keyword}}},  // search exact string in database
-                                {match:{"db_message":keyword}},
-                                {match:{"message":keyword}}  // match the similar string in files
+                                // {term:{message:{"value":keyword}}},  // search exact string in database
+                                {match:{db_message:{"query":keyword, "operator":"and"}}}, // database
+                                {match_phrase:{"message":keyword}}  // files
                             ]
                         }
                     },
@@ -183,7 +169,7 @@ function elasticSearch(search, sendBack)
         query = queryFunc(keyword, 1, folder);
     }
     client.search(query).then(function (res){
-        // get search resultj
+        // get search result
         var total = res.hits.total;
         console.log("total: " + total);
         result = res.hits.hits;
