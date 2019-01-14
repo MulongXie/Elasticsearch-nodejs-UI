@@ -42,6 +42,7 @@ function router() {
         console.log("\n\ninput folder: " + folder);
         console.log("Input keyword: " + keycontent);
 
+        // trigger the search engine
         // search by given keywords
         es.elasticSearch(search, function (result) {
             var response = {};  // the final return response
