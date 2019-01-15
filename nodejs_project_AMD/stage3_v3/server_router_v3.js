@@ -92,7 +92,7 @@ function router() {
 
     // *** open port ***
     app.listen(8888, function () {
-        console.log('server created \n');
+        console.log('Server created with port: 8888\n');
     });
 }
 
