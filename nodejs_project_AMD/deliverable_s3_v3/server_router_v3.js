@@ -18,7 +18,7 @@ function router() {
     var keycontent;  // the input keyword
     var folder;  // the input folder
 
-    app.use(express.static('public'));
+    app.use(express.static(__dirname + '/public'));
     app.use(express.static(__dirname));
     app.use(express.static('logs'));
     app.use(bodyParser.urlencoded({extended: false}));
@@ -42,6 +42,7 @@ function router() {
         console.log("\n\ninput folder: " + folder);
         console.log("Input keyword: " + keycontent);
 
+        // trigger the search engine
         // search by given keywords
         es.elasticSearch(search, function (result) {
             var response = {};  // the final return response
@@ -91,7 +92,7 @@ function router() {
 
     // *** open port ***
     app.listen(8888, function () {
-        console.log('server created \n');
+        console.log('Server created with port: 8888\n');
     });
 }
 
