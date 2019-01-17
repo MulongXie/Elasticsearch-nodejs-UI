@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2572ebe1-602d-4051-8c95-3314594a5abc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/nodejs_project_AMD/handover.docx" beforeDir="false" afterPath="$PROJECT_DIR$/nodejs_project_AMD/handover.docx" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/public/index_v3.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3876">
+              <caret line="240" column="41" selection-start-line="240" selection-start-column="41" selection-end-line="240" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/ui_v3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="206" column="30" selection-start-line="206" selection-start-column="30" selection-end-line="206" selection-end-column="30" />
+              <folding>
+                <element signature="e#53#69#0" />
+                <element signature="n#!!block;n#disp_overview#0" />
+                <element signature="e#693#740#0" />
+                <element signature="e#831#2632#0" />
+                <element signature="e#900#2305#0" />
+                <element signature="e#1015#2221#0" />
+                <element signature="e#1827#2207#0" />
+                <element signature="e#2349#2626#0" />
+                <element signature="e#2769#2852#0" />
+                <element signature="e#2873#2957#0" />
+                <element signature="e#2966#3159#0" />
+                <element signature="e#3178#3258#0" />
+                <element signature="e#3267#3458#0" />
+                <element signature="n#!!block;n#disp_txt#0" />
+                <element signature="n#!!block;n#disp_db#0" />
+                <element signature="n#!!block;n#disp_detail#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/server_router_v3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/public/style_v3.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/server_searchengine_v3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#!!block;n#queryFunc#0" />
+                <element signature="n#!!block;n#elasticSearch#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/public/index_v3.html" />
+        <option value="$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/server_router_v3.js" />
+        <option value="$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/ui_v3.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="460" />
+    <option name="width" value="1147" />
+    <option name="height" value="867" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Elasticsearch-nodejs-UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Elasticsearch-nodejs-UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Elasticsearch-nodejs-UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Elasticsearch-nodejs-UI" type="462c0819:PsiDirectoryNode" />
+              <item name="nodejs_project_AMD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Elasticsearch-nodejs-UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Elasticsearch-nodejs-UI" type="462c0819:PsiDirectoryNode" />
+              <item name="nodejs_project_AMD" type="462c0819:PsiDirectoryNode" />
+              <item name="stage3_v3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Elasticsearch-nodejs-UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Elasticsearch-nodejs-UI" type="462c0819:PsiDirectoryNode" />
+              <item name="nodejs_project_AMD" type="462c0819:PsiDirectoryNode" />
+              <item name="stage3_v3" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="server_router_v3.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/server_router_v3.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.server_router_v3.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2572ebe1-602d-4051-8c95-3314594a5abc" name="Default Changelist" comment="" />
+      <created>1547092592345</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547092592345</updated>
+      <workItem from="1547092593817" duration="249000" />
+      <workItem from="1547092893318" duration="40000" />
+      <workItem from="1547512696990" duration="2594000" />
+      <workItem from="1547525015076" duration="17000" />
+      <workItem from="1547688630019" duration="2178000" />
+      <workItem from="1547691232142" duration="29000" />
+      <workItem from="1547691533125" duration="5222000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="10329000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="460" y="0" width="1147" height="867" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17493238" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32909605" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/server_searchengine_v3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#queryFunc#0" />
+            <element signature="n#!!block;n#elasticSearch#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/public/style_v3.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/server_router_v3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/ui_v3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="206" column="30" selection-start-line="206" selection-start-column="30" selection-end-line="206" selection-end-column="30" />
+          <folding>
+            <element signature="e#53#69#0" />
+            <element signature="n#!!block;n#disp_overview#0" />
+            <element signature="e#693#740#0" />
+            <element signature="e#831#2632#0" />
+            <element signature="e#900#2305#0" />
+            <element signature="e#1015#2221#0" />
+            <element signature="e#1827#2207#0" />
+            <element signature="e#2349#2626#0" />
+            <element signature="e#2769#2852#0" />
+            <element signature="e#2873#2957#0" />
+            <element signature="e#2966#3159#0" />
+            <element signature="e#3178#3258#0" />
+            <element signature="e#3267#3458#0" />
+            <element signature="n#!!block;n#disp_txt#0" />
+            <element signature="n#!!block;n#disp_db#0" />
+            <element signature="n#!!block;n#disp_detail#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodejs_project_AMD/stage3_v3/public/index_v3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3876">
+          <caret line="240" column="41" selection-start-line="240" selection-start-column="41" selection-end-line="240" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
