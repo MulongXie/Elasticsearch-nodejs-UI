@@ -18,7 +18,7 @@ function router() {
     var keycontent;  // the input keyword
     var folder;  // the input folder
 
-    app.use(express.static('public'));
+    app.use(express.static(__dirname + '/public'));
     app.use(express.static(__dirname));
     app.use(express.static('logs'));
     app.use(bodyParser.urlencoded({extended: false}));

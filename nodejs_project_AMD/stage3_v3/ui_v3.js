@@ -143,7 +143,6 @@ function disp_db(hit, keyword, no_db, tables_db){
     tables_db[type] += body;
 }
 
-
 function disp_detail(result, keyword){
     var hits = result.hits.hits;
     var table_txt = "<table border='0'><tr><th>Number</th><th>Log Folder</th><th>Log Name</th><th>Log Date</th><th>Log Time</th><th>Message</th></tr>";
