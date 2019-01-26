@@ -11,5 +11,4 @@ Performing the functionalilty of vusualization through Plotly.JS.
 
 Connecting to a concise delicated search engine UI to be easliy used by user.
 
-
 [COMPLETED]
