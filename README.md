@@ -3,7 +3,8 @@
 A search engine powered by Elasticsearch used for 
   - fast search(less than 0.2 seconds) in 
   - massive(million-level) 
-  - various(.pdf, .txt, Oracle/MySQL) data.
+  - various(.pdf, .txt, Oracle/MySQL) data
+  - simultaneously.
 
 Achieving the capability of full-text all fields search without explicit table and column names.
 
